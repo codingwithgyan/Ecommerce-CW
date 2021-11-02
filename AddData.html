@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <style type="text/css">
+      .container {
+        width: 80%;
+        margin: auto;
+      }
+      textarea {
+        height: 150px;
+        width: 100%;
+      }
+      input {
+        height: 50px;
+        width: 200px;
+        background-color: #0071ff94;
+        color: white;
+        border: none;
+        font-size: 20px;
+        margin-top: 4%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Click the button to add dummy data</h1>
+      <input type="button" value="Click here" onclick="fn()" name="" />
+    </div>
+  </body>
+  <script type="text/javascript">
+    var admin = [
+      {
+        email: "admin@gmail.com",
+        password: "12345",
+      },
+    ];
+    var user = [
+      {
+        email: "user@gmail.com",
+        password: "12345",
+        cart: "",
+        wishlist: "",
+      },
+    ];
+
+    var brand = [
+      {
+        brand_id: "1",
+        name: "Lakme",
+        logo_img:
+          "https://media6.ppl-media.com/mediafiles/ecomm/promo/1502367558_lakme.jpg",
+        description:
+          "As a skincare brand with a legacy of making the most trusted beauty products in the country, Lakme needs no introduction. It has been in the Indian market for over 65 years and is the first home grown beauty brand of the country, conceived at a time when Indian women had no indigenous beauty options to choose from. And this endeavour has been successful, given the fact that every Indian woman will testify that their first trust with skincare and beauty was in the form of a Lakme makeup product. This long, trusted association in the beauty industry has made sure that lakme products are the flag bearer of makeup trends and styles in India.Not only that, along with providing a range of beauty and makeup products, Lakme India is also in the business of beauty services as evident from the number of Lakme brand salons all over the country, which provide beauty solutions for all your needs.",
+      },
+    ];
+
+    var category = [
+      { category_id: "1", name: "Makeup" },
+      { category_id: "2", name: "Skin care" },
+      { category_id: "3", name: "Hair care" },
+      { category_id: "4", name: "Personal care" },
+      { category_id: "5", name: "Men" },
+      { category_id: "6", name: "Fragrance" },
+      { category_id: "7", name: "Health & Wellness" },
+      { category_id: "8", name: "Mom & Baby" },
+    ];
+
+    var type = [
+      { category_id: "1", type_id: "1", name: "Face Makeup" },
+      { category_id: "1", type_id: "2", name: "Eye Makeup" },
+      { category_id: "1", type_id: "3", name: "Lip Makeup" },
+      { category_id: "1", type_id: "4", name: "Nails" },
+      { category_id: "1", type_id: "5", name: "Brushes and Tools" },
+      { category_id: "1", type_id: "6", name: "Gifts and Value Sets" },
+
+      { category_id: "2", type_id: "7", name: "Cleanser" },
+      { category_id: "2", type_id: "8", name: "Toner and Facemask" },
+      { category_id: "2", type_id: "9", name: "Moisturizer" },
+      { category_id: "2", type_id: "10", name: "Mask" },
+      { category_id: "2", type_id: "11", name: "Sunscreen" },
+      { category_id: "2", type_id: "12", name: "Eyecare" },
+      { category_id: "2", type_id: "13", name: "Lipcare" },
+      { category_id: "2", type_id: "14", name: "Body Care" },
+      { category_id: "2", type_id: "15", name: "Bath & Shower" },
+      { category_id: "2", type_id: "16", name: "Hand & Footcare" },
+      { category_id: "2", type_id: "17", name: "Massager & Face Tool" },
+      { category_id: "2", type_id: "18", name: "Aromatherapy" },
+      { category_id: "2", type_id: "19", name: "Gifts and Value Sets" },
+      { category_id: "2", type_id: "20", name: "By Concern" },
+      { category_id: "2", type_id: "21", name: "By Benefits" },
+
+      { category_id: "3", type_id: "22", name: "Shampoo & Conditioners" },
+      { category_id: "3", type_id: "23", name: "Nourishment" },
+      { category_id: "3", type_id: "24", name: "Hair styling & tools" },
+      { category_id: "3", type_id: "25", name: "Hair Accessories" },
+      { category_id: "3", type_id: "26", name: "Gifts and Value Sets" },
+      { category_id: "3", type_id: "27", name: "By Concern" },
+      { category_id: "3", type_id: "28", name: "By Hairtype" },
+
+      { category_id: "4", type_id: "29", name: "Bath & Body" },
+      { category_id: "4", type_id: "30", name: "Feminine Hygiene" },
+      { category_id: "4", type_id: "31", name: "Women's Grooming" },
+      { category_id: "4", type_id: "32", name: "Men's Grooming" },
+      { category_id: "4", type_id: "33", name: "Dental Care" },
+      { category_id: "4", type_id: "34", name: "Hard & Root Care" },
+      { category_id: "4", type_id: "35", name: "Hair Care" },
+      { category_id: "4", type_id: "36", name: "Gifts & Value Sets" },
+
+      { category_id: "5", type_id: "37", name: "Shaving Care" },
+      { category_id: "5", type_id: "38", name: "Skincare" },
+      { category_id: "5", type_id: "39", name: "Bath & aby" },
+      { category_id: "5", type_id: "40", name: "Hair Care" },
+      { category_id: "5", type_id: "41", name: "Beard Care" },
+      { category_id: "5", type_id: "42", name: "Frangrance" },
+
+      { category_id: "6", type_id: "43", name: "Fragnance for men" },
+      { category_id: "6", type_id: "44", name: "Frangnance for Women" },
+
+      { category_id: "7", type_id: "45", name: "Health Supplements" },
+      { category_id: "7", type_id: "46", name: "Sexual Health Products" },
+      { category_id: "7", type_id: "47", name: "Health Food & Drinks" },
+      { category_id: "7", type_id: "48", name: "Pain Relief & First Aid" },
+      { category_id: "7", type_id: "49", name: "By Concern" },
+
+      { category_id: "8", type_id: "50", name: "Baby Skin Care" },
+      { category_id: "8", type_id: "51", name: "Baby Bath & Oil" },
+      { category_id: "8", type_id: "52", name: "Kids Care" },
+      { category_id: "8", type_id: "53", name: "Maternity Care" },
+      { category_id: "8", type_id: "54", name: "Nursing & Feeding" },
+      { category_id: "8", type_id: "55", name: "Gifts & Value Sets" },
+    ];
+
+    var subtype = [
+      { category_id: "1", type_id: "1", subtype_id: "1", name: "Primer" },
+      { category_id: "1", type_id: "1", subtype_id: "2", name: "Concealer" },
+      {
+        category_id: "1",
+        type_id: "1",
+        subtype_id: "3",
+        name: "BB & CC Creams",
+      },
+      { category_id: "1", type_id: "1", subtype_id: "4", name: "Foundation" },
+      { category_id: "1", type_id: "1", subtype_id: "5", name: "Cream" },
+      { category_id: "1", type_id: "1", subtype_id: "6", name: "Loose Powder" },
+      {
+        category_id: "1",
+        type_id: "1",
+        subtype_id: "7",
+        name: "Highlighters & Illuminators",
+      },
+      { category_id: "1", type_id: "1", subtype_id: "8", name: "Bronzer" },
+      { category_id: "1", type_id: "1", subtype_id: "9", name: "Contour" },
+      {
+        category_id: "1",
+        type_id: "1",
+        subtype_id: "10",
+        name: "Setting Sprays & Fixers",
+      },
+      { category_id: "1", type_id: "1", subtype_id: "11", name: "Sindoor" },
+      {
+        category_id: "1",
+        type_id: "1",
+        subtype_id: "12",
+        name: "Makeup Remover",
+      },
+
+      { category_id: "1", type_id: "2", subtype_id: "13", name: "Eyeliner" },
+      {
+        category_id: "1",
+        type_id: "2",
+        subtype_id: "14",
+        name: "Under Eye Concealers",
+      },
+      { category_id: "1", type_id: "2", subtype_id: "15", name: "Eye Shadow" },
+      { category_id: "1", type_id: "2", subtype_id: "16", name: "Kajal" },
+      { category_id: "1", type_id: "2", subtype_id: "17", name: "Maskara" },
+      {
+        category_id: "1",
+        type_id: "2",
+        subtype_id: "18",
+        name: "False Eyelashes",
+      },
+      {
+        category_id: "1",
+        type_id: "2",
+        subtype_id: "19",
+        name: "Eyebrow Enhancer",
+      },
+
+      { category_id: "1", type_id: "3", subtype_id: "20", name: "Lip Balm" },
+      { category_id: "1", type_id: "3", subtype_id: "21", name: "Lip Scrub" },
+
+      {
+        category_id: "1",
+        type_id: "4",
+        subtype_id: "22",
+        name: "Nails Polish",
+      },
+      {
+        category_id: "1",
+        type_id: "4",
+        subtype_id: "23",
+        name: "Gel Nails Polish ",
+      },
+      {
+        category_id: "1",
+        type_id: "4",
+        subtype_id: "24",
+        name: "Matte Nail Polish",
+      },
+      {
+        category_id: "1",
+        type_id: "4",
+        subtype_id: "25",
+        name: "Top & Base Coat",
+      },
+      {
+        category_id: "1",
+        type_id: "4",
+        subtype_id: "26",
+        name: "Nails Polish Remover",
+      },
+      {
+        category_id: "1",
+        type_id: "4",
+        subtype_id: "27",
+        name: "Manicure & Padicure Kits",
+      },
+
+      {
+        category_id: "1",
+        type_id: "5",
+        subtype_id: "28",
+        name: "Face Brushes",
+      },
+      { category_id: "1", type_id: "5", subtype_id: "29", name: "Eye Brushes" },
+      { category_id: "1", type_id: "5", subtype_id: "30", name: "Lip Brushes" },
+      {
+        category_id: "1",
+        type_id: "5",
+        subtype_id: "31",
+        name: "Brushes Sets",
+      },
+      {
+        category_id: "1",
+        type_id: "5",
+        subtype_id: "32",
+        name: "Sponges & Applicators",
+      },
+      { category_id: "1", type_id: "5", subtype_id: "33", name: "Tweezer" },
+      {
+        category_id: "1",
+        type_id: "5",
+        subtype_id: "34",
+        name: "Eyelash Curlers",
+      },
+      { category_id: "1", type_id: "5", subtype_id: "35", name: "Mirror" },
+      {
+        category_id: "1",
+        type_id: "5",
+        subtype_id: "36",
+        name: "Makeup Pouches",
+      },
+      {
+        category_id: "1",
+        type_id: "5",
+        subtype_id: "37",
+        name: "Makeup Brush Cleaners",
+      },
+      { category_id: "1", type_id: "5", subtype_id: "38", name: "Sharpener" },
+    ];
+
+    var products = [
+      {
+        category: "Skin Care",
+        type: "Moisturizer",
+        subtype: "Face Moisturizers & Day Creams",
+        name: "Blue Heaven Flawless Makeup Base Primer (30 g)",
+        Brand: "Lakhme",
+        offer: "15",
+        price: "239",
+        description: "",
+      },
+    ];
+
+    function fn() {
+      localStorage.setItem("admin", JSON.stringify(admin));
+      localStorage.setItem("brand", JSON.stringify(brand));
+      localStorage.setItem("user", JSON.stringify(user));
+      localStorage.setItem("category", JSON.stringify(category));
+      localStorage.setItem("type", JSON.stringify(type));
+      localStorage.setItem("subtype", JSON.stringify(subtype));
+      localStorage.setItem("products", JSON.stringify(products));
+      alert("Successful");
+    }
+  </script>
+</html>
