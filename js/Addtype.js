@@ -1,10 +1,8 @@
 window.addEventListener("load",function(){
     var cat=document.getElementById("cat");
     var category_data=JSON.parse(localStorage.getItem("category"));
-    if(category_data==null)
+    if(category_data!=null)
     {
-        category_data=[];
-    }
     for(var i=0;i<category_data.length;i++)
     {
         var opt=document.createElement("option");
@@ -23,11 +21,16 @@ window.addEventListener("load",function(){
         {
             type_data=[];
             obj.category_id=1;
+            obj.type_id=1;
+        }
+        else
+        {
+            obj.type_id=+type_data[type_data.length-1].type_id;
+            obj.type_id+=1;
         }
         
         obj.category_id=cat.value;
-        obj.type_id=+type_data[type_data.length-1].type_id;
-        obj.type_id+=1;
+        
         obj.name=type;
 
         type_data.push(obj);
@@ -46,5 +49,9 @@ window.addEventListener("load",function(){
         var add_category=document.getElementById("add_category").addEventListener("click",function(){ window.location.href="Addcategory.html"; });
         var add_brand=document.getElementById("add_brand").addEventListener("click",function(){ window.location.href="Addbrand.html"; });
         var add_product=document.getElementById("add_product").addEventListener("click",function(){ window.location.href="Addproduct.html"; });
-    
+    } 
+    else
+    {
+        alert("Add Category First");
+    }
 });    

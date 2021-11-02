@@ -1,15 +1,15 @@
 window.addEventListener("load",function(){
     var cat=document.getElementById("cat");
+   
     var category_data=JSON.parse(localStorage.getItem("category"));
 
     var type=document.getElementById("type");
     var type_data=JSON.parse(localStorage.getItem("type"));
 
-    if(category_data==null)
+    if(category_data!=null && type_data!=null)
     {
-        category_data=[];
-        obj.category_id=1;
-    }
+       
+        //Adding category data to options
     for(var i=0;i<category_data.length;i++)
     {
         var opt=document.createElement("option");
@@ -18,18 +18,31 @@ window.addEventListener("load",function(){
         cat.append(opt);
     }
 //Adding type data to options
-    if(type_data==null)
-    {
-        type_data=[];
-        obj.type_id=1;
-    }
     for(var i=0;i<type_data.length;i++)
     {
-        var opt=document.createElement("option");
-        opt.innerHTML=type_data[i].name;
-        opt.setAttribute("value",type_data[i].type_id);
-        type.append(opt);
+        
+        if(type_data[i].category_id=="1")
+        {
+            var opt=document.createElement("option");
+            opt.innerHTML=type_data[i].name;
+            opt.setAttribute("value",type_data[i].type_id);
+            type.append(opt);
+        }
     }
+
+    cat.addEventListener("change",function(){
+        type.innerHTML="";
+        for(var i=0;i<type_data.length;i++)
+        {
+            if(type_data[i].category_id==cat.value)
+            {
+                var opt=document.createElement("option");
+                opt.innerHTML=type_data[i].name;
+                opt.setAttribute("value",type_data[i].type_id);
+                type.append(opt);
+            }
+        }
+    });
 
 
     var btn=document.getElementById("btn");
@@ -43,13 +56,18 @@ window.addEventListener("load",function(){
             subtype_data=[];
             obj.category_id=1;
             obj.type_id=1;
+            obj.subtype_id=1;
+        }
+        else
+        {
+            obj.subtype_id=+subtype_data[subtype_data.length-1].subtype_id;
+            obj.subtype_id+=1;
         }
         
         obj.category_id=cat.value;
         obj.type_id=type.value;
 
-        obj.subtype_id=+subtype_data[subtype_data.length-1].subtype_id;
-        obj.subtype_id+=1;
+       
         obj.name=subtype;
 
         subtype_data.push(obj);
@@ -70,5 +88,5 @@ window.addEventListener("load",function(){
         var add_brand=document.getElementById("add_brand").addEventListener("click",function(){ window.location.href="Addbrand.html"; });
         var add_product=document.getElementById("add_product").addEventListener("click",function(){ window.location.href="Addproduct.html"; });
     
-
+    }
 });    

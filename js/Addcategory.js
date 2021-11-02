@@ -3,16 +3,20 @@ window.addEventListener("load",function(){
     btn.addEventListener("click",function(){
         //Adding category to local storage
         var data=JSON.parse(localStorage.getItem("category"));
+        var category=document.querySelector("input").value;
         var obj={};
         if(data==null)
         {
             data=[];
             obj.category_id=1;
+            
         }
-      
-        obj.category_id=+data[data.length-1].category_id;
-        obj.category_id+=1;
-        var category=document.querySelector("input").value;
+        else
+        {
+            obj.category_id=+data[data.length-1].category_id;
+            obj.category_id+=1;
+        }
+ 
         obj.name=category;
         data.push(obj);
         localStorage.setItem("category",JSON.stringify(data));
