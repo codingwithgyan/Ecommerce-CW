@@ -1,0 +1,14 @@
+.form {
+  align-items: center;
+}
+#content {
+  width: 80%;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 20px 20px;
+}
+
+#btn {
+  margin-left: 41.5%;
+  width: 59%;
+}
