@@ -126,10 +126,35 @@ for(var i=0;i<brand_data.length;i++)
             obj.subtype_id=+subtype_data[subtype_data.length-1].subtype_id;
             obj.subtype_id+=1;
         }
+
+        //Storing in a object
+        for(var i=0;i<category_data.length;i++)
+        {
+            if(cat.value==category_data[i].category_id)
+            {
+                obj.category=category_data[i].name;
+                break;
+            }
+        }
+
+        for(var i=0;i<type_data.length;i++)
+        {
+            if(type.value==type_data[i].type_id)
+            {
+                obj.type=type_data[i].name;
+                break;
+            }
+        }
         
-        obj.category=cat.value;
-        obj.type=type.value;
-        obj.subtype=subtype.value;
+        for(var i=0;i<subtype_data.length;i++)
+        {
+            if(subtype.value==subtype_data[i].subtype_id)
+            {
+                obj.subtype=subtype_data[i].name;
+                break;
+            }
+        }
+
         obj.brand=brand.value;       
         obj.name=name.value;
         obj.offer=offer.value;
@@ -140,7 +165,7 @@ for(var i=0;i<brand_data.length;i++)
 
         products_data.push(obj);
         localStorage.setItem("products",JSON.stringify(products_data));
-        alert("SubType added sucessfully");
+        alert("Product added sucessfully");
 
     });
 
