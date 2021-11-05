@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>purplle_signUp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind&family=Roboto&display=swap" rel="stylesheet">
+  </head>
+  <style>
+    h1{
+      font-weight: lighter;
+      margin: 0px;
+      margin-left: 10px;
+    }
+    p{
+      /* text-align: center; */
+      margin-top: 0px;
+      margin-left: 10px;
+      word-spacing: 2px;
+     
+    }
+    a{
+      text-decoration: none;
+     margin-left: 35%;
+     color: #e40980;
+    }
+    #signInMain {
+     
+      height: 700px;
+      width: 30%;
+      margin: auto;
+      margin-top: 50px;
+      background-color: rgb(243, 241, 242);
+      font-family: 'Hind', sans-serif;
+    }
+    input {
+      width: 80%;
+      height: 30px;
+      border: none;
+      margin-left: 20px;
+      margin-top: 20px;
+    }
+    lable {
+      text-align: left;
+      margin-left: 20px;
+      margin-top: 15px;
+    }
+    #button {
+      margin-left: 5%;
+      margin-top: 20px;
+      height: 40px;
+      width: 90%;
+      font-size: 20px;
+      background-color: #e40980;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      font-family: 'Hind', sans-serif;
+    }
+    
+  </style>
+  <body>
+    <div id="signInMain">
+      <form>
+        <h1>Welcome Aboard</h1>
+        <p>lets know you bettrer and make sure that you never lose assess of your account</p>
+        <hr>
+        <lable>Enter your name</lable>
+        <br />
+        <input id="username" type="text" placeholder="Enter your name" required />
+        <hr>
+        <lable>E-mail Address</lable>
+        <br />
+        <input id="email" type="email" placeholder="Enter your Email" required />
+        <hr />
+        <lable>Passwoard</lable>
+        <br />
+        <input id="pass" type="password" placeholder="Create password" required/>
+        <hr />
+        <lable>Mobile No.</lable>
+        <br />
+        <input id="mobile" type="number" placeholder="Enter your number" required/>
+        <hr />
+        <lable>Gender</lable>
+        <select id="gender">
+          <option value="select">Select</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+        <hr />
+        <button id="button">SUBMIT</button>
+        
+      </form>
+      <br>
+      <a href="purplle_popup_signin.html"> &larr; back to login</a>
+    </div>
+  </body>
+</html>
+<script>
+  var btn=document.querySelector("button");
+    btn.addEventListener("click",signup);
+     var userData=JSON.parse(localStorage.getItem("user"))||[]
+    function signup(){
+      console.log("here")
+        var emailid=document.getElementById("email").value
+        var pass=document.getElementById("pass").value
+        var username=document.getElementById("username").value
+        var mobile=document.getElementById("mobile").value
+        var gender=document.getElementById("gender").value
+
+        var userCredentials={
+            email:emailid,
+            password:pass,
+            username:username,
+            mobile:mobile,
+            Gender:gender,
+            cart:"",wishlist:""
+        }
+      /*if any of the input feild is kept empty by the user then the 
+      code below will restrict addition of data to local storage*/
+        if(emailid==false ||pass==false||username==false || mobile==false){
+
+         alert("Please fill all the details")
+        }
+        else{
+          userData.push(userCredentials);
+            localStorage.setItem("user",JSON.stringify(userData));
+            alert("signup sussesfull");
+            window.location.href="purplle_signin.html"
+        }
+            
+    }
+</script>
