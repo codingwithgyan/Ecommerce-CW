@@ -4,91 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      /* login box styling */
-      .loginmain {
-        display: none;
-        position: fixed;
-        z-index: 1;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgb(240, 228, 234, 0.9);
-        overflow: auto;
-        padding-top: 60px;
-      }
-      #loginCover {
-        width: 30%;
-        height: 300px;
-        /* margin: auto; */
-        position: absolute;
-        right: 35%;
-        margin-top: 100px;
-        background-color: rgb(243, 241, 242);
-        font-family: "Hind", sans-serif;
-      }
-      h1 {
-        font-weight: lighter;
-        margin: 0px;
-        margin-left: 10px;
-      }
-      input {
-        width: 80%;
-        height: 30px;
-        border: none;
-        margin-left: 20px;
-        margin-top: 20px;
-      }
-      lable {
-        text-align: left;
-        margin-left: 20px;
-        margin-top: 15px;
-      }
-      #button {
-        margin-left: 5%;
-        margin-top: 20px;
-        height: 40px;
-        width: 90%;
-        font-size: 20px;
-        background-color: #e40980;
-        color: white;
-        border: none;
-        border-radius: 3px;
-      }
-      a {
-        text-decoration: none;
-        margin-left: 35%;
-        color: #e40980;
-      }
-      .close {
-        position: absolute;
-        right: 33%;
-        top: 110px;
-        color: #000;
-        font-size: 40px;
-        font-weight: bold;
-      }
-      .close:hover,
-      .close:focus {
-        color: red;
-        cursor: pointer;
-      }
-
-      .clearfix::after {
-        content: "";
-        clear: both;
-        display: table;
-      }
-    </style>
+    <title>purplle_popup_signin</title>
+    <link rel="stylesheet" href="purplle_popup_signin.css">
   </head>
   <body>
     <div id="logbutton">
       <button
         onclick="document.getElementById('id01').style.display='block'"
-        style="width: auto"
-      >
+        style="width: auto" >
         Sign Up
       </button>
     </div>
@@ -130,50 +53,5 @@
     </div>
   </body>
 </html>
-<script>
-  //the wcript below will disable popup box if clicked any were in the window
-  var modal = document.getElementById("id01");
 
-  window.onclick = function (event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  };
-</script>
-<script>
-  document.querySelector("#button").addEventListener("click", signin);
-
-  var validUsers = JSON.parse(localStorage.getItem("user"));
-
-  function signin() {
-    // console.log("function")
-    var username = document.querySelector("#username").value;
-    var pass = document.querySelector("#pass").value;
-
-    if (username == "admin" && pass == "admin") {
-      window.location.href = "admin.html";
-    } else {
-      for (var i = 0; i < validUsers.length; i++) {
-        if (
-          validUsers[i].userName == username &&
-          validUsers[i].passWord == pass
-        ) {
-          currentUser = {
-            currentuser: validUsers[i].userName,
-            email: validUsers[i].emailAddress,
-          };
-          var notalert = true;
-        }
-      }
-      if (notalert) {
-        localStorage.setItem("currentUser", JSON.stringify(currentUser));
-        alert("login succesfull");
-
-        //direct to the location of home page
-      } else {
-        alert("enter valid credentials");
-      }
-    }
-  }
-  // console.log(loggedIn)
-</script>
+<script type="text/javascript" src="purplle_popup_signin.js"></script>
