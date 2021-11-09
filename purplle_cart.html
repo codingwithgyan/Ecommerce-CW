@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart</title>
+    <style>
+        body{
+            background-color: #f3dfea;
+        }
+        .cover{
+            width: 100%;
+            /* border: 1px solid red; */
+            display: flex;
+            font-family: "Hind", sans-serif;
+           
+        }
+        .cart{
+            border: 2px solid  #74043e;
+            width: 60%;
+        }
+        .total{
+            border: 2px solid  #74043e; 
+            width: 40%;
+
+        }
+        #main{
+            width: 100%;
+            height: 100px;
+            /* border: solid 1px violet; */
+            display: flex;
+        }
+        #imgDiv{
+            width: 20%;
+            height: 98%;
+            border: yellowgreen 1px solid;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        #details{
+            width: 80%;
+            height: 100%;
+            /* border: yellowgreen 1px solid;  */
+        }
+        h3,p{
+            margin-left: 20px;
+        }
+        .total{
+            padding: 40px;
+            text-align: center;
+        }
+        #paybutton{
+            width: 400px;
+            margin-top: 50px;
+            background-color: #e40980;;
+            color: wheat;
+            font-size: 20px;
+        }
+        button{
+            width: 150px;
+            /* margin-top: 50px; */
+            background-color: #e40980;;
+            color: wheat;
+            font-size: 20px;
+            height: 40px;
+        }
+        input{
+            width: 150px;
+            margin-right: 50px;
+            /* /* margin-left: 20px;  */
+            border: 3px solid  #e40980;
+            height: 30px;
+            font-size: 20px;
+            background-color: #f3dfea;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="cover">
+        <div class="cart"></div>
+        <div class="total">
+         
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    var cartitems=JSON.parse(localStorage.getItem("cartItems"))
+    console.log(cartitems)
+    var totalCost=0;
+    displaycart(cartitems)
+      
+    function displaycart(cartitems){
+        cartitems.map(function(item){
+            var main=document.createElement("div")
+            main.setAttribute("id","main")
+           var cart= document.querySelector(".cart");
+           var hr=document.createElement("hr")
+           cart.append(main,hr)
+           var imgDiv=document.createElement("div");
+           imgDiv.setAttribute("id","imgDiv")
+           var img=document.createElement("img");
+           img.setAttribute("src",item.img_url)
+           imgDiv.append(img)
+           main.append(imgDiv)
+           
+           var details=document.createElement("div");
+           details.setAttribute("id","details");
+           main.append(details)
+           var h1=document.createElement("h3");
+           h1.setAttribute("id","productName");
+           h1.textContent=item.name;
+
+           var p=document.createElement("p");
+           p.setAttribute("id","price")
+           p.textContent =	(item.price);
+           
+
+           details.append(h1,p)
+
+        //    for the total cost
+        
+            totalCost=(+totalCost)+(+item.price);
+            
+        }) 
+
+    
+        var total=document.querySelector(".total")
+        var cost=document.createElement("h1")
+           cost.textContent=" Cart Total-"+ "  "+totalCost;
+           total.append(cost)
+
+            var promocode=document.createElement("input")
+            promocode.setAttribute("placeholder","Promocode")
+            var br=document.createElement("br")
+            total.append(promocode)
+
+           var button=document.createElement("button");
+           button.textContent="Apply promo"
+           total.append(button)
+        
+           button.addEventListener("click",function(){
+            applyPromo(totalCost)
+           })
+           function applyPromo(totalCost){
+               if(promocode.value=="get30%off"){
+                console.log(promocode.value)
+                  totalCost=totalCost*0.7
+                  console.log(totalCost)
+                  cost.textContent="Cart Total-"+"  "+ totalCost;
+                alert("promo code applied")
+               }
+                  
+                
+                localStorage.setItem("totalPayable",JSON.stringify(totalCost))
+
+           }
+           var paybutton=document.createElement("button")
+           paybutton.textContent="CheckOut"
+           paybutton.setAttribute("id","paybutton")
+           total.append(paybutton)
+         paybutton.addEventListener("click",function(){
+             window.location.href="#"
+            //  give the location of payment page
+         })
+          
+
+    }
+    
+</script>
