@@ -1,0 +1,49 @@
+.product-container{
+    display: flex;
+}
+.side-container>div{
+    border: 1px solid #c1c6ca;
+    width: 79px;
+    height: 79px;
+    margin-bottom: 12%;
+}
+.main-container{
+    border: 1px solid #c1c6ca;
+    width: 600px;
+    height: 600px;
+    margin-left: 8%;
+}
+.name h4{
+    border: 1px solid transparent;
+    width: 10%;
+    border-radius: 10%;
+    background-color: #27aa0b;
+    color: white;
+    padding: 5px 5px;
+}
+.right-container{
+    margin-left: 5%;
+}
+.name button{
+    font-size: 20px;
+    padding: 15px 30px;
+    border-radius: 5%;
+}
+.name .cart{
+    background-color: deeppink;
+    color: white;
+    border: transparent;
+}
+.name .save{
+    background-color: white;
+    color: deeppink;
+    border: 1px solid #c1c6ca;
+}
+.name h1{
+    color: #33414c;
+    font-weight: normal;
+}
+.prod-highlite{
+    width: 800px;
+    color: #33414c;
+}
