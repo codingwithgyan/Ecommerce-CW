@@ -16,6 +16,7 @@ body {
 img {
   height: inherit;
   width: inherit;
+  z-index: 1;
 }
 .content {
   width: 90%;
@@ -48,4 +49,29 @@ h4 {
   text-align: center;
   font-weight: normal;
   font-family: "Times New Roman", Times, serif;
+}
+#icons {
+  height: 75.8%;
+  width: 40%;
+  position: relative;
+  float: right;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 30px;
+  padding-bottom: 60px;
+  overflow: hidden;
+  padding-right: 10px;
+  background-color: rgba(51, 51, 51, 0.411);
+  z-index: 2;
+}
+#icons > div {
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: rgb(231, 226, 226);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#icons i {
+  font-size: 30px;
 }
