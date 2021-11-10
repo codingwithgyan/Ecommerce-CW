@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        #d1{
+          width: 80%;
+         
+          margin: auto;
+        }
+        
+      #container {
+       
+        display: flex;
+        flex-wrap: wrap;
+        
+        gap: 20px;
+        
+       
+      }
+      .card{
+          width: 200px;
+          height: 320px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          
+          line-height: 10px;
+          overflow: hidden;
+          
+      }
+      .img1{
+          width: 100%;
+          height: 200px;
+          
+      }
+      span{
+          font-size: 25px;
+      }
+      h1{
+          font-size: 23px;
+          color: rgb(133, 132, 132);     
+                     
+          
+      }
+      
+    </style>
+  </head>
+
+  <body>
+      <div id="d1" >
+
+      </div>
+  </body>
+</html>
+
+<script>
+    
+  
+  var maindiv = document.createElement("div");
+  maindiv.setAttribute("id", "container");
+
+  var added = JSON.parse(localStorage.getItem("products"));
+  displayItem(added);
+
+  function displayItem(added) {
+    added.map(function (item) {
+      var card = document.createElement("div");
+      card.setAttribute("class", "card");
+
+      var img = document.createElement("img");
+      img.setAttribute("src", item.image_url_1);
+      img.setAttribute("class", "img1")
+
+      var h1 = document.createElement("h1");
+      h1.textContent = item.name;
+
+      var h11 = document.createElement("h1");
+      h11.textContent = item.discription;
+
+      var p = document.createElement("p");
+      p.innerHTML = `<h4>&#x20B9;<span>${item.price}</span>   <span style="font-size:15px; color:grey; text-decoration: line-through;">225</span>   <span style="font-size:15px; color:rgb(252, 80, 109);">15% off</span></h4>`;
+
+      
+
+      card.append(img, h1,h11, p);
+      maindiv.append(card);
+      
+      document.querySelector("#d1").append(maindiv)
+
+    });
+  }
+</script>
