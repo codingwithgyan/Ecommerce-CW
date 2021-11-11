@@ -35,14 +35,15 @@
         password: "12345",
       },
     ];
+    var currentUser = { email: "user@gmail.com" };
     var user = [
       {
         email: "user@gmail.com",
         password: "12345",
         gender: "male",
         mobile: "1234567890",
-        cart: "",
-        wishlist: "",
+        cart: [],
+        wishlist: [],
       },
     ];
 
@@ -101,6 +102,30 @@
         logo_img: "https://image3.mouthshut.com/images/imagesp/926003380s.png",
         description:
           "Buy the best WOW beauty products at affordable prices at our website. Explore a wide range of makeup products and try on a variety of lipstick shades that suits you the most.",
+      },
+      {
+        brand_id: 8,
+        name: "NY Bae",
+        logo_img:
+          "https://cdn.shopify.com/s/files/1/0019/1810/7757/files/NYbae.png?height=628&pad_color=fff&v=1560254681&width=1200",
+        description:
+          "NY Bae Foundations come in both liquid and stick forms and are specially crafted for Indian skin tones to give you the perfect base for makeup. Its light formula blends smoothly with your skin to hide blemishes and spots, leaving your face with a nice, radiant glow.",
+      },
+      {
+        brand_id: 9,
+        name: "Insight",
+        logo_img:
+          "data:image/png;base64,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",
+        description:
+          "Makeup is not just about looking beautiful, rather it is also about enhancing your look. INSIGHT Cosmetics comes with a wide range of cosmetic products with a touch of perfection to give your skin a flawless makeup look. The brand provides you with products that make you look perfect and gorgeous.",
+      },
+      {
+        brand_id: 10,
+        name: "Lotus",
+        logo_img:
+          "https://cdn.shopify.com/s/files/1/0428/8063/0937/files/Copy-of-LOTUS-HERBALS_9da8eb0e-9456-487d-8cd7-600e35066411.jpg?v=1631270806",
+        description:
+          "Lotus is a premium and well-established brand with a history dating back to 1973. The brand uses a wide range of herbs and flora to cater to the skincare and beauty concerns rising from contemporary lifestyles. The Lotus Herbals brands products are extremely tender on the skin and can effectively fetch you the desired results.",
       },
     ];
 
@@ -173,148 +198,125 @@
       { category_id: "8", type_id: "55", name: "Gifts & Value Sets" },
     ];
     var subtype = [
-      { category_id: "1", type_id: "1", subtype_id: "1", name: "Primer" },
-      { category_id: "1", type_id: "1", subtype_id: "2", name: "Concealer" },
+      { category_id: "1", type_id: "1", subtype_id: 1, name: "Primer" },
+      { subtype_id: 2, category_id: "1", type_id: "1", name: "Concealer" },
+      { subtype_id: 3, category_id: "1", type_id: "1", name: "BB & CC Creams" },
+      { subtype_id: 4, category_id: "1", type_id: "1", name: "Foundation" },
+      { subtype_id: 5, category_id: "1", type_id: "1", name: "Compact" },
+      { subtype_id: 6, category_id: "1", type_id: "1", name: "Loose Powder" },
+      { subtype_id: 7, category_id: "1", type_id: "2", name: "Eyeliner" },
       {
-        category_id: "1",
-        type_id: "1",
-        subtype_id: "3",
-        name: "BB & CC Creams",
-      },
-      { category_id: "1", type_id: "1", subtype_id: "4", name: "Foundation" },
-      { category_id: "1", type_id: "1", subtype_id: "5", name: "Cream" },
-      { category_id: "1", type_id: "1", subtype_id: "6", name: "Loose Powder" },
-      {
-        category_id: "1",
-        type_id: "1",
-        subtype_id: "7",
-        name: "Highlighters & Illuminators",
-      },
-      { category_id: "1", type_id: "1", subtype_id: "8", name: "Bronzer" },
-      { category_id: "1", type_id: "1", subtype_id: "9", name: "Contour" },
-      {
-        category_id: "1",
-        type_id: "1",
-        subtype_id: "10",
-        name: "Setting Sprays & Fixers",
-      },
-      { category_id: "1", type_id: "1", subtype_id: "11", name: "Sindoor" },
-      {
-        category_id: "1",
-        type_id: "1",
-        subtype_id: "12",
-        name: "Makeup Remover",
-      },
-      { category_id: "1", type_id: "2", subtype_id: "13", name: "Eyeliner" },
-      {
+        subtype_id: 8,
         category_id: "1",
         type_id: "2",
-        subtype_id: "14",
-        name: "Under Eye Concealers",
+        name: "Under eye Concealers",
       },
-      { category_id: "1", type_id: "2", subtype_id: "15", name: "Eye Shadow" },
-      { category_id: "1", type_id: "2", subtype_id: "16", name: "Kajal" },
-      { category_id: "1", type_id: "2", subtype_id: "17", name: "Maskara" },
+      { subtype_id: 9, category_id: "1", type_id: "2", name: "Eyeshadow" },
+      { subtype_id: 10, category_id: "1", type_id: "2", name: "Kajal" },
+      { subtype_id: 11, category_id: "1", type_id: "2", name: "Mascara" },
+      { subtype_id: 12, category_id: "1", type_id: "3", name: "Lipstick" },
       {
+        subtype_id: 13,
         category_id: "1",
-        type_id: "2",
-        subtype_id: "18",
-        name: "False Eyelashes",
+        type_id: "3",
+        name: "Liquid Lipstick",
       },
+      { subtype_id: 14, category_id: "1", type_id: "3", name: "Lip Crayon" },
+      { subtype_id: 15, category_id: "1", type_id: "3", name: "Lip Liner" },
+      { subtype_id: 16, category_id: "1", type_id: "3", name: "Lip Gloss" },
+      { subtype_id: 17, category_id: "1", type_id: "4", name: "Nail Polish" },
       {
-        category_id: "1",
-        type_id: "2",
-        subtype_id: "19",
-        name: "Eyebrow Enhancer",
-      },
-      { category_id: "1", type_id: "3", subtype_id: "20", name: "Lip Balm" },
-      { category_id: "1", type_id: "3", subtype_id: "21", name: "Lip Scrub" },
-      {
+        subtype_id: 18,
         category_id: "1",
         type_id: "4",
-        subtype_id: "22",
-        name: "Nails Polish",
+        name: "Gel Nail Polish",
       },
       {
+        subtype_id: 19,
         category_id: "1",
         type_id: "4",
-        subtype_id: "23",
-        name: "Gel Nails Polish ",
-      },
-      {
-        category_id: "1",
-        type_id: "4",
-        subtype_id: "24",
         name: "Matte Nail Polish",
       },
+      { subtype_id: 20, category_id: "1", type_id: "5", name: "Face Brushes" },
+      { subtype_id: 21, category_id: "1", type_id: "5", name: "Eye Brushes" },
+      { subtype_id: 22, category_id: "1", type_id: "5", name: "Lip Brushes" },
+      { subtype_id: 23, category_id: "1", type_id: "5", name: "Brushe Sets" },
+      { subtype_id: 24, category_id: "2", type_id: "7", name: "Face Wash" },
+      { subtype_id: 25, category_id: "2", type_id: "7", name: "Cleanser" },
       {
-        category_id: "1",
-        type_id: "4",
-        subtype_id: "25",
-        name: "Top & Base Coat",
+        subtype_id: 26,
+        category_id: "2",
+        type_id: "7",
+        name: "Scrubs & Exfoliators",
       },
       {
-        category_id: "1",
-        type_id: "4",
-        subtype_id: "26",
-        name: "Nails Polish Remover",
+        subtype_id: 27,
+        category_id: "2",
+        type_id: "7",
+        name: "Makeup Remover",
+      },
+      { subtype_id: 28, category_id: "2", type_id: "8", name: "Toner" },
+      { subtype_id: 29, category_id: "2", type_id: "8", name: "Face Mists" },
+      {
+        subtype_id: 30,
+        category_id: "2",
+        type_id: "9",
+        name: "Face Moisturizers & Day Creams",
+      },
+      { subtype_id: 31, category_id: "2", type_id: "9", name: "Night Cream" },
+      { subtype_id: 32, category_id: "2", type_id: "10", name: "Sheet Mask" },
+      {
+        subtype_id: 33,
+        category_id: "2",
+        type_id: "12",
+        name: "Eye Masks & Patches",
+      },
+      { subtype_id: 34, category_id: "2", type_id: "12", name: "Eye Serum" },
+      { subtype_id: 35, category_id: "2", type_id: "12", name: "Eye Cream" },
+      {
+        subtype_id: 36,
+        category_id: "2",
+        type_id: "12",
+        name: "Eye Makeup Remover",
+      },
+      { subtype_id: 37, category_id: "2", type_id: "13", name: "Lip Balm" },
+      { subtype_id: 38, category_id: "2", type_id: "13", name: "Lip Scrub" },
+      {
+        subtype_id: 39,
+        category_id: "2",
+        type_id: "14",
+        name: "Body Lotions & Moisturizers",
       },
       {
-        category_id: "1",
-        type_id: "4",
-        subtype_id: "27",
-        name: "Manicure & Padicure Kits",
+        subtype_id: 40,
+        category_id: "2",
+        type_id: "14",
+        name: "Body Creams & Body Butters",
       },
+      { subtype_id: 41, category_id: "3", type_id: "22", name: "Shampoo" },
+      { subtype_id: 42, category_id: "3", type_id: "22", name: "Dry Shampoo" },
+      { subtype_id: 43, category_id: "3", type_id: "22", name: "Conditioner" },
+      { subtype_id: 44, category_id: "3", type_id: "23", name: "Hair Oil" },
+      { subtype_id: 45, category_id: "3", type_id: "23", name: "Hair Serum" },
       {
-        category_id: "1",
-        type_id: "5",
-        subtype_id: "28",
-        name: "Face Brushes",
+        subtype_id: 46,
+        category_id: "3",
+        type_id: "23",
+        name: "Hair Spa & Mask",
       },
-      { category_id: "1", type_id: "5", subtype_id: "29", name: "Eye Brushes" },
-      { category_id: "1", type_id: "5", subtype_id: "30", name: "Lip Brushes" },
-      {
-        category_id: "1",
-        type_id: "5",
-        subtype_id: "31",
-        name: "Brushes Sets",
-      },
-      {
-        category_id: "1",
-        type_id: "5",
-        subtype_id: "32",
-        name: "Sponges & Applicators",
-      },
-      { category_id: "1", type_id: "5", subtype_id: "33", name: "Tweezer" },
-      {
-        category_id: "1",
-        type_id: "5",
-        subtype_id: "34",
-        name: "Eyelash Curlers",
-      },
-      { category_id: "1", type_id: "5", subtype_id: "35", name: "Mirror" },
-      {
-        category_id: "1",
-        type_id: "5",
-        subtype_id: "36",
-        name: "Makeup Pouches",
-      },
-      {
-        category_id: "1",
-        type_id: "5",
-        subtype_id: "37",
-        name: "Makeup Brush Cleaners",
-      },
-      { category_id: "1", type_id: "5", subtype_id: "38", name: "Sharpener" },
-      { subtype_id: 39, category_id: "2", type_id: "7", name: "Face Wash" },
-      { subtype_id: 40, category_id: "3", type_id: "22", name: "Shampoo" },
-      { subtype_id: 41, category_id: "3", type_id: "22", name: "Dry Shampoo" },
-      { subtype_id: 42, category_id: "3", type_id: "22", name: "Conditioner" },
+      { subtype_id: 47, category_id: "3", type_id: "24", name: "Hair Color" },
+      { subtype_id: 48, category_id: "3", type_id: "24", name: "Hair Spray" },
       {
         subtype_id: 49,
-        category_id: "4",
-        type_id: "32",
-        name: "Shaving cream",
+        category_id: "3",
+        type_id: "24",
+        name: "Styling Cream, Gel & Waxes",
+      },
+      {
+        subtype_id: 50,
+        category_id: "3",
+        type_id: "25",
+        name: "Hair Clips, Bands & More",
       },
     ];
 
@@ -323,111 +325,90 @@
         category: "Makeup",
         type: "Face Makeup",
         subtype: "Primer",
-        brand: "Lakme",
-        name: "Lakme Eyeconic Kajal - Black (0.35 g) ",
-        offer: "8",
-        price: "170",
+        brand: "NY Bae",
+        name: "NY Bae Brightenin' Primer|Face Primer| For Brightening & Radiant Glow| Removes Creases| Even Skin Tone| All Skin Types| Matte|",
+        offer: "25",
+        price: "215",
         image_url_1:
-          "https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/197458/lakme-eyeconic-kajal-black-0-35-g1_1_display_1565343869_05201d8e.jpg",
+          "https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/240160/ny-bae-primer-gold-15g-16_10_display_1631800142_eeaaffb8.jpg",
         image_url_2:
-          "https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/197458/lakme-eyeconic-kajal-black-0-35-g1_8_display_1581144981_521e12b3.jpg",
+          "https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/240160/ny-bae-primer-gold-15g-16_6_display_1623940907_80a23140.jpg",
         image_url_3:
-          "https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/197458/lakme-eyeconic-kajal-black-0-35-g1_2_display_1565343870_fad5c971.jpg",
+          "https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/240160/ny-bae-primer-gold-15g-16_3_display_1623940903_db3d5375.jpg",
+        description:
+          "Rise and shine bright with NY Bae Brightenning Primer. This is for every girl who dreamt of smooth, even-textured, bright skin in minutes. Its light-weight feel covers your face beautifully and gives a creaseless, long-lasting, even-toned finish. So go girl, go flawless.",
       },
       {
-        subtype_id: 39,
-        category: "Skin care",
-        type: "Moisturizer",
-        brand: "Lakme",
-        name: "Nivea Nourishing Body Milk (400 ml)",
-        offer: "30",
-        price: "279",
-        image_url_1:
-          "https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/206145/nivea-nourishing-body-milk-with-almond-oil-400-ml-15-21_8_display_1633764760_534775be.jpg",
-        image_url_2:
-          "https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/206145/nivea-nourishing-body-milk-with-almond-oil-400-ml-15-21_10_display_1633764761_494711c8.jpg",
-        image_url_3:
-          "https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/206145/nivea-nourishing-body-milk-with-almond-oil-400-ml-15-21_12_display_1633764763_641304b3.jpg",
-      },
-      {
-        subtype_id: 39,
-        category: "Makeup",
-        type: "Lip Makeup",
-        subtype: "Lip Balm",
-        brand: "Lakme",
-        name: "SUGAR Tipsy Lips Moisturizing Balm - 02 Cosmopolitan",
-        offer: "0",
-        price: "199",
-        image_url_1:
-          "https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/207528/sugar-tipsy-lips-moisturizing-balm-02-cosmopolitan-4-5-g_1_display_1600168555_579f368b.jpg",
-        image_url_2:
-          "https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/207528/sugar-tipsy-lips-moisturizing-balm-02-cosmopolitan-4-5-g_2_display_1600168556_b06f80a1.jpg",
-        image_url_3:
-          "https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/207528/sugar-tipsy-lips-moisturizing-balm-02-cosmopolitan-4-5-g_4_display_1600168557_7fbe9840.jpg",
-      },
-      {
-        subtype_id: 39,
+        subtype_id: 51,
         category: "Makeup",
         type: "Face Makeup",
-        subtype: "Foundation",
-        brand: "Maybelline",
-        name: "Maybelline New York Fit Me Matte+Poreless Liquid Foundation Tube - Ivory 115 (18 ml)",
-        offer: "20",
-        price: "200",
+        subtype: "Primer",
+        brand: "Insight",
+        name: "Insight 3 In 1 Long Lasting Primer (30ml)",
+        offer: "0",
+        price: "250",
         image_url_1:
-          "https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/182497/maybelline-new-york-fit-me-matte-poreless-liquid-foundation-tube-115-ivory-18-ml_8_display_1610370201_a8313c45.jpg",
+          "https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/239648/insight-3-in-1-long-lasting-primer-30ml-67_2_display_1630212475_7b05bb98.jpg",
         image_url_2:
-          "https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/182497/maybelline-new-york-fit-me-matte-poreless-liquid-foundation-tube-115-ivory-18-ml_3_display_1610370198_b55190f3.jpg",
+          "https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/239648/insight-3-in-1-long-lasting-primer-30ml-67_2_display_1635142506_b33f594d.jpg",
         image_url_3:
-          "https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/182497/maybelline-new-york-fit-me-matte-poreless-liquid-foundation-tube-115-ivory-18-ml_4_display_1610370198_6a333fe8.jpg",
+          "https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/239648/insight-3-in-1-long-lasting-primer-30ml-67_4_display_1635142507_c9489492.jpg",
+        description:
+          "Reduce the appearance and fine lines and pores while locking in your makeup looks with this insight 3-in-1 primer. This 3-in-1 formula primes, protects, and moisturizes your face to prepare it as a perfect canvas. Lightweight and oil-free, it glides on to give a flawless finish to the makeup.INCREASE THE LONGIVITY OF MAKE UPPRIMES,PROTECTS AND MOISTURISESPRIMES,PROTECTS AND MOISTURISES,LONG LASTING,OIL FREE, SATIN FINISHall skin types,Color cosmetics that transform your makeup look! Insight is a revolutionary makeup brand from VOV International. The brand is known for its affordable, professional quality makeup products and offers wide array of color cosmetics for women who crave for sophisticated innovations in makeup and beauty. Insight Cosmetics offers a broad range of makeup products including Nail polish, Lipstick, mascara, eyeliners, eye shadows, foundations, concealers, powder, lip-gloss, makeup brushes, and tools. Its extended range also includes professional makeup range, artistic products and makeup for special effects.",
       },
       {
-        subtype_id: 40,
-        category: "Skin care",
-        type: "Cleanser",
-        subtype: "Face Wash",
-        brand: "Good Vibes",
-        name: "Good Vibes Papaya Brightening Face Wash | Deep Pore Cleansing, Non-Drying | With Mulberry | No Parabens, No Mineral Oil, No Animal Testing (120 ml)",
-        offer: "15",
-        price: "205",
-        image_url_1:
-          "https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/249728/good-vibes-brightening-face-wash-papaya-120-ml_6_display_1620453029_e89fdd73.jpg",
-        image_url_2:
-          "https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/249728/good-vibes-brightening-face-wash-papaya-120-ml_8_display_1625550796_aa929336.jpg",
-        image_url_3:
-          "https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/249728/good-vibes-brightening-face-wash-papaya-120-ml_7_display_1621258253_60dc8a6d.jpg",
-      },
-      {
-        subtype_id: 43,
-        category: "Hair care",
-        type: "Shampoo & Conditioners",
-        subtype: "Shampoo",
-        brand: "Wow",
-        name: "WOW Skin Science Apple Cider Vinegar Shampoo (300 ml)",
+        subtype_id: 51,
+        category: "Makeup",
+        type: "Face Makeup",
+        subtype: "Primer",
+        brand: "Blue Heaven",
+        name: "Blue Heaven Flawless Make-up Base Primer",
         offer: "25",
-        price: "499",
+        price: "225",
         image_url_1:
-          "https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/138074/wow-apple-cider-vinegar-shampoo-300-ml1_4_display_1631767596_482d574c.jpg",
+          "https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/172035/blue-heaven-studio-perfection-primer-30-g_3_display_1622163985_8f216d41.jpg",
         image_url_2:
-          "https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/138074/wow-apple-cider-vinegar-shampoo-300-ml1_3_display_1595931247_68126836.jpg",
+          "https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/172035/blue-heaven-studio-perfection-primer-30-g_2_display_1622163985_055c9737.jpg",
         image_url_3:
-          "https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/138074/wow-apple-cider-vinegar-shampoo-300-ml1_1_display_1595931231_c30f3821.jpg",
+          "https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/172035/blue-heaven-studio-perfection-primer-30-g_5_display_1622163987_4dc42eee.jpg",
+        description:
+          "Use the Studio Perfection Primer under your makeup to make sure that your makeup looks fresh all day & stays on for hours! It is an amazing base for your makeup and is oil-free & non-greasy.",
       },
       {
-        subtype_id: 50,
-        category: "Skin care",
-        type: "Cleanser",
-        subtype: "Face Wash",
-        brand: "Wow",
-        name: "WOW Skin Science Brightening Vitamin C Foaming Face Wash With Built-In Face Brush (150 ml)",
-        offer: "10",
-        price: "325",
+        subtype_id: 51,
+        category: "Makeup",
+        type: "Face Makeup",
+        subtype: "Primer",
+        brand: "Lakme",
+        name: "NY Bae Pro Primer | Orange Colour Correcting Face Primer | Covers Dark Spots & Pigmentation | Matte Finish | Light weight | Quick Absorbing | Pore Filling",
+        offer: "12",
+        price: "219",
         image_url_1:
-          "https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/225022/wow-skin-science-brightening-vitamin-c-foaming-face-wash-with-built-in-face-brush-100-ml-20_7_display_1614578741_1b264dc6.jpg",
+          "https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/250565/ny-bae-pro-primer-orange-color-correcting-face-primer-15-ml_1_display_1634907622_6adaad73.jpg",
         image_url_2:
-          "https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/225022/wow-skin-science-brightening-vitamin-c-foaming-face-wash-with-built-in-face-brush-100-ml-20_8_display_1614578741_85b947af.jpg",
+          "https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/250565/ny-bae-pro-primer-orange-color-correcting-face-primer-15-ml_2_display_1634907623_7f1a9fa6.jpg",
         image_url_3:
-          "https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/225022/wow-skin-science-brightening-vitamin-c-foaming-face-wash-with-built-in-face-brush-100-ml-20_10_display_1614578743_a070505e.jpg",
+          "https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/250565/ny-bae-pro-primer-orange-color-correcting-face-primer-15-ml_3_display_1634907625_b9716318.jpg",
+        description:
+          "What's better than a primer? A colour correcting primer! NY Bae’s Colour Correcting Pro Primer in Orange is here to help you look your finest. A little dab dab and poof, dark spots and pigmentation magically disappear. Its matte finish gives you the perfect chic look while soft texture hugs your skin like a warm hug. It seamlessly hides pores, uneven skin tone and refines your skin texture. Make the revolutionary color correcting NY Bae Pro Primer yours today",
+      },
+      {
+        subtype_id: 51,
+        category: "Makeup",
+        type: "Face Makeup",
+        subtype: "Primer",
+        brand: "Blue Heaven",
+        name: "Blue Heaven Flawless Makeup Base Primer (30 g)",
+        offer: "25",
+        price: "244",
+        image_url_1:
+          "https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/232332/blue-heaven-studio-perfection-primer-30-g_2_display_1612161844_9ec6a65b.jpg",
+        image_url_2:
+          "https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/232332/blue-heaven-studio-perfection-primer-30-g_2_display_1613195604_6d580da9.jpg",
+        image_url_3:
+          "https://media4.purplle.com/static/img/brand//__1619586836_b9f3303c.jpg",
+        description:
+          "Use the Studio Perfection Primer under your makeup to make sure that your makeup looks fresh all day & stays on for hours! It is an amazing base for your makeup and is oil-free & non-greasy.",
       },
     ];
 
@@ -439,6 +420,7 @@
       localStorage.setItem("type", JSON.stringify(type));
       localStorage.setItem("subtype", JSON.stringify(subtype));
       localStorage.setItem("products", JSON.stringify(products));
+      localStorage.setItem("currentUser", JSON.stringify(currentUser));
       alert("Successful");
     }
   </script>

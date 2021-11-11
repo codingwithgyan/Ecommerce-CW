@@ -114,6 +114,8 @@ for(var i=0;i<brand_data.length;i++)
         var image_url_1=document.getElementById("image_url_1");
         var image_url_2=document.getElementById("image_url_2");
         var image_url_3=document.getElementById("image_url_3");
+        var description=document.getElementById("description");
+
         var obj={};
         
         var products_data=JSON.parse(localStorage.getItem("products"));
@@ -162,7 +164,7 @@ for(var i=0;i<brand_data.length;i++)
         obj.image_url_1=image_url_1.value;
         obj.image_url_2=image_url_2.value;
         obj.image_url_3=image_url_3.value;
-
+        obj.description=description.value;
         products_data.push(obj);
         localStorage.setItem("products",JSON.stringify(products_data));
         alert("Product added sucessfully");
