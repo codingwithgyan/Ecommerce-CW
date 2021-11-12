@@ -186,5 +186,10 @@ window.addEventListener("load",function(){
     cart_btn_11.addEventListener("click",function(){
         window.location.href="../Cart.html";
     });
+    var wish_btn_11=document.getElementById("wish_btn_11");
+    wish_btn_11.style.cursor="pointer";
+    wish_btn_11.addEventListener("click",function(){
+        window.location.href="../Wishlist.html";
+    });
 
 });

@@ -157,7 +157,7 @@ function addFeautres()
    
    var placeorder=document.querySelector("#placeorderbutton");
    placeorder.addEventListener("click",function(){
-       window.location.href="purplle_payment.html"
+       window.location.href="../Payment.html"
    });
 }
  
