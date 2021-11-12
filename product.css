@@ -5,7 +5,8 @@
     border: 1px solid #c1c6ca;
     width: 79px;
     height: 79px;
-    margin-bottom: 12%;
+    margin-bottom: 22%;
+    margin-left: 100%;
 }
 .main-container{
     border: 1px solid #c1c6ca;
@@ -28,6 +29,7 @@
     font-size: 20px;
     padding: 15px 30px;
     border-radius: 5%;
+    margin-top: 5%;
 }
 .name .cart{
     background-color: deeppink;
@@ -40,10 +42,50 @@
     border: 1px solid #c1c6ca;
 }
 .name h1{
-    color: #33414c;
+    color: #2c414c;
     font-weight: normal;
+    font-family:serif;
+    font-size: 16px;
+
 }
 .prod-highlite{
-    width: 800px;
-    color: #33414c;
+    width: 730px;
+    height: 100px;
+    margin-left: 5%;
+}
+.prod-highlite h1{
+   font-family: serif;
+   font-weight: normal;
+   font-size: 22px;
+   line-height: 0px;
+   margin-top: 5%;
+}
+.prod-highlite p{
+    font-family: serif;
+    font-weight: normal;
+    color: #a0a092;
+ }
+.name{
+    margin-right: 10%;
+    
+}
+.name h2 span{
+    color: deeppink;
+    font-weight: normal;
+    font-size: 18px;
+}
+.name>div{
+    display: flex;
+    line-height: 0px;
+}
+.name h2 s{
+    font-weight: normal;
+    font-size: 14px;
+    color: #a0a092;
+}
+.name>div p{
+    color: #a0a092;
+    margin-top: 9%;
+    margin-left: 3%;
+    font-size: 15px;
 }
