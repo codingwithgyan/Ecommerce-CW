@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style>
+            * {
+              box-sizing: border-box;
+            }
+            body {
+              margin: 3rem 1rem 3rem 6rem;
+            }
+
+            h1 {
+              text-align: center;
+            }
+            .column {
+              float: left;
+              width: 200PX;
+              height: 200px
+              padding: 100px;
+            }
+
+            /* Clearfix (clear floats) */
+            .row::after {
+              content: "";
+              clear: both;
+              display: table;
+            }
+            ul.breadcrumb {
+              padding: 10px 16px;
+              list-style: none;
+              text-align: center;
+            }
+            ul.breadcrumb li {
+              display: inline;
+              font-size: 18px;
+            }
+            ul.breadcrumb li + li:before {
+              padding: 8px;
+              color: black;
+              content: "/\00a0";
+            }
+            ul.breadcrumb li a {
+              color: #0275d8;
+              text-decoration: none;
+            }
+            ul.breadcrumb li a:hover {
+              color: #01447e;
+              text-decoration: underline;
+
+            }
+            .row{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%;
+      }
+      .column{
+        margin-left: 2rem;
+        margin-right: 2rem;
+
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="breadcrumb">
+      <li><a href="#">Home</a></li>
+      <li><a href="brand.html">Brand</a></li>
+      <li>Ply Mask</li>
+    </ul>
+    <h1>3 PLY MASK</h1>
+    <h3 style="margin-top: 4rem; text-align: center">ALL PRODUCTS</h3>
+    <div class="row">
+      <div class="column">
+        <img
+          src="https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/198577/3-ply-mask-pack-of-25-1_1_display_1586514738_70341fba.jpg"
+          alt="Snow"
+          style="width: 100%"
+        />
+        <p>3 Ply mask - Pack of 25</p>
+        <h2>
+          ₹ 250
+          <span
+            style="font-size: 14px; color: gray; text-decoration: line-through"
+            >400
+          </span>
+          <span style="font-size: 14px; color: red"> 35% off </span>
+        </h2>
+      </div>
+      <div class="column">
+        <img
+          src="https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/198575/3-ply-mask-pack-of-25_1_display_1586494034_fe198b79.jpg"
+          alt="Forest"
+          style="width: 100%"
+        />
+        <p>3 Ply mask - Pack of 25</p>
+        <h2>₹ 400</h2>
+      </div>
+      <div class="column">
+        <img
+          src="https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/198576/3-ply-mask-reusable-n95-mask_1_display_1586494318_d12514fc.jpg"
+          alt="Mountains"
+          style="width: 100%"
+        />
+        <p>3 Ply mask - Reusable N95</p>
+        <h2>₹ 250</h2>
+      </div>
+    </div>
+
+    <script></script>
+  </body>
+</html>
