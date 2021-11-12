@@ -60,7 +60,7 @@ h5{
     width: 92%;
     margin: auto;
 }
-#populerPiks1>img,#box9Img>img,#featured1>img{
+#populerPiks1>img,#box9Img>img, #featured1>img{
     width: 100%;
 }
 #box5>img, #shopByCategory2>img, #box8>img,#box10>img,#giftingStore2>img{
