@@ -1,4 +1,5 @@
 var slider1 = [
+    { img_url: "https://media6.ppl-media.com/tr:w-1280,c-at_max,f-gif/mediafiles/ecomm/misc/1636484585_web.gif" },
     { img_url: "https://media6.ppl-media.com/tr:w-1280,c-at_max/mediafiles/ecomm/misc/1635945374_app-copy-2.png" },
     { img_url: "https://media6.ppl-media.com/tr:w-1280,c-at_max,f-gif/mediafiles/ecomm/misc/1635961661_web-banner.gif" },
     { img_url: "https://media6.ppl-media.com/tr:w-1280,c-at_max/mediafiles/ecomm/misc/1636129130_tfs_web-1298x418.jpg" },
@@ -40,7 +41,11 @@ showSlides();
 
 
 var box2 = [
-    { img_url:""},
+    {
+        img_url: "https://media6.ppl-media.com/tr:w-1280,ar-51715-16654,c-at_max/mediafiles/ecomm/misc/1635259449_web-hero-banner-1298-x-418.jpg",
+        offUpTo:"fifty"
+    },
+    
     { img_url:"https://media6.ppl-media.com/tr:w-1280,ar-51715-16654,c-at_max,f-gif/mediafiles/ecomm/misc/1635916266_web-banner-1.gif"},
     { img_url:"https://media6.ppl-media.com/tr:w-1280,ar-51715-16654,c-at_max/mediafiles/ecomm/misc/1636111323_nybae-lipconfession-web-header-banner-1298-418-3.jpg"},
     { img_url:"https://media6.ppl-media.com/tr:w-1280,ar-51715-16654,c-at_max/mediafiles/ecomm/misc/1635782845_ag-web-banner-1298x418.jpg"},
@@ -49,22 +54,36 @@ var box2 = [
     { img_url: "https://media6.ppl-media.com/tr:w-1280,ar-51715-16654,c-at_max/mediafiles/ecomm/misc/1635782848_dd-web-brand-banner-1280-x-400-copy.jpg" },
     { img_url: "https://media6.ppl-media.com/tr:w-1280,ar-51715-16654,c-at_max/mediafiles/ecomm/misc/1634886222_everything-new-on-purplle-1.jpg" },
     { img_url: "https://media6.ppl-media.com/tr:w-1280,ar-51715-16654,c-at_max,f-gif/mediafiles/ecomm/misc/1634790183_the-ultimate-buying-guidethe-ultimate-buying-guide-web-1.gif" },
-    { img_url: "https://media6.ppl-media.com/tr:w-1280,ar-51715-16654,c-at_max/mediafiles/ecomm/misc/1635259449_web-hero-banner-1298-x-418.jpg" },
+    
+
     // { img_url: "" },
     // { img_url: "" },
     // { img_url: "" },
     // { img_url: "" },
     
 ]
+//<a><img src="item.img_url"></a>
 
 box2.map(function (item) {
     var box2 = document.getElementById("box2");
+    var div = document.createElement("div");
+    div.setAttribute("id", "div1");
     var img = document.createElement("img");
     img.setAttribute("src", item.img_url);
+    if (item.offUpTo == "fifty") {
+        div.addEventListener("click", uptoOff);
+        div.style.cursor="pointer"
+    }
     
-    box2.append(img)
+    
+    box2.append(div)
+    div.append(img)
 
 })
+
+function uptoOff() {
+    return window.location.href="upToOff.html"
+}
 
 var box3 = [
     { img_url: "https://media6.ppl-media.com/tr:w-640,ar-321-350,c-at_max,f-gif/mediafiles/ecomm/misc/1635516427_web-banner-1_01-1.gif" },
@@ -490,6 +509,8 @@ var slider7 = [
     { img_url: "https://media6.ppl-media.com/tr:w-1280,c-at_max/mediafiles/ecomm/misc/1636121235_clinique_web.jpg" },
     { img_url: "https://media6.ppl-media.com/tr:w-1280,c-at_max/mediafiles/ecomm/misc/1635985967_glutaweis_home-page-web.jpg" },
 ]
+
+//nav bar js //nav bar js //nav bar js //nav bar js //nav bar js
 
 window.addEventListener("load",function(){
     var container=document.getElementById("cat");
