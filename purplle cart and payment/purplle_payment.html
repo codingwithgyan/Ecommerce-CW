@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind&family=Roboto&family=Zen+Kaku+Gothic+Antique&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="purplle_payment.css" />
+  </head>
+  <body>
+    <div class="cover">
+      <h4>fill the details</h4>
+      <form>
+        <input placeholder="first name" />
+
+        <input placeholder="last name" required />
+        
+        <input placeholder="adress line 1" required />
+        <input placeholder="adress line 2" />
+        
+        <input placeholder="city" required />
+        <input placeholder="pin code" required />
+        
+        <hr />
+        <div>
+          <span>Total Payable--</span>
+          <span id="finalPayAmount"></span>
+        </div>
+        
+        <hr>
+        <lable>Select payment mode</lable>
+        <br>
+        <select id="changeMode">
+          <option value="card">debit card</option>
+          <option value="internet banking">internet banking</option>
+          <option value="cash on delivery">cash on delivery</option>
+        </select>
+        
+        
+        <div id="paymentdata">
+         
+        </div>
+
+        <br />
+        <br />
+        <button id="paybutton">pay</button>
+      </form>
+    </div>
+  </body>
+</html>
+
+<script type="text/javascript" src="purplle_payment.js"></script>

@@ -1,0 +1,45 @@
+.cover{
+    border: red 1px solid;
+    width: 40%;
+    /* height: 700px; */
+    margin: auto;
+    text-align: center;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    color: #e40980;
+}
+form{
+   text-align: center;
+}
+input{
+    width: 250px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    height: 30px;
+    font-size: 15px;
+}
+#cardNo{
+    width: 300px;
+}
+.expiry,.cvv{
+    width: 140px;
+}
+select{
+    width: 200px;
+    height: 30px;
+    /* margin-top: 30px; */
+    margin-bottom: 20px;
+}
+#IBmsg{
+    color: #e40980;
+   
+}
+button{
+    width: 90%;
+  height: 45px;
+  background-color: #e40980;
+  color: white;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
