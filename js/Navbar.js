@@ -29,7 +29,7 @@ window.addEventListener("load",function(){
     for(var i=0;i<category_div.length;i++)
     {
        
-        category_div[i].addEventListener("mouseover",function(){
+    category_div[i].addEventListener("mouseover",function(){
             type_1.innerHTML="";
             type_2.innerHTML="";
             type_3.innerHTML="";
@@ -49,7 +49,13 @@ window.addEventListener("load",function(){
                             if(subtype_data[k].type_id==type_data[j].type_id)
                             {
                                 var p=document.createElement("p");
+                                p.style.cursor="pointer";
+                                p.setAttribute("class","page");
                                 p.innerHTML=subtype_data[k].name;
+                                p.addEventListener("click",function(){
+                                    localStorage.setItem("currentPage",this.innerHTML);
+                                    window.location.href="../filterpage.html";
+                                });
                                 type_1.append(p);
                             }
                            
@@ -66,7 +72,13 @@ window.addEventListener("load",function(){
                             if(subtype_data[k].type_id==type_data[j].type_id)
                             {
                                 var p=document.createElement("p");
+                                p.style.cursor="pointer";
+                                p.setAttribute("class","page");
                                 p.innerHTML=subtype_data[k].name;
+                                p.addEventListener("click",function(){
+                                    localStorage.setItem("currentPage",this.innerHTML);
+                                    window.location.href="../filterpage.html";
+                                });
                                 type_2.append(p);
                             }
                            
@@ -83,7 +95,13 @@ window.addEventListener("load",function(){
                             if(subtype_data[k].type_id==type_data[j].type_id)
                             {
                                 var p=document.createElement("p");
+                                p.style.cursor="pointer";
+                                p.setAttribute("class","page");
                                 p.innerHTML=subtype_data[k].name;
+                                p.addEventListener("click",function(){
+                                    localStorage.setItem("currentPage",this.innerHTML);
+                                    window.location.href="../filterpage.html";
+                                });
                                 type_3.append(p);
                             }
                            
@@ -100,7 +118,13 @@ window.addEventListener("load",function(){
                             if(subtype_data[k].type_id==type_data[j].type_id)
                             {
                                 var p=document.createElement("p");
+                                p.style.cursor="pointer";
+                                p.setAttribute("class","page");
                                 p.innerHTML=subtype_data[k].name;
+                                p.addEventListener("click",function(){
+                                    localStorage.setItem("currentPage",this.innerHTML);
+                                    window.location.href="../filterpage.html";
+                                });
                                 type_4.append(p);
                             }
                            
@@ -120,8 +144,7 @@ window.addEventListener("load",function(){
         });
         
     }
-
-
+    
     container.addEventListener("mouseover",function(){
         category.style.display="flex";
         view.style.display="flex";
@@ -142,8 +165,9 @@ window.addEventListener("load",function(){
         view.style.display="none";
     });
 
-
+   
     view.addEventListener("mouseover",function(){
+        
         category.style.display="flex";
         view.style.display="flex";
     });
@@ -151,7 +175,16 @@ window.addEventListener("load",function(){
         category.style.display="none";
         view.style.display="none";
     });
+    var b2=document.getElementsByClassName("b2");
+    b2[0].style.cursor="pointer";
+    b2[0].addEventListener("click",function(){
+        window.location.href="../Home.html";
+    });
 
-
+    var cart_btn_11=document.getElementById("cart_btn_11");
+    cart_btn_11.style.cursor="pointer";
+    cart_btn_11.addEventListener("click",function(){
+        window.location.href="../Cart.html";
+    });
 
 });

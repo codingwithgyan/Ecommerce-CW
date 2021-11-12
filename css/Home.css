@@ -12,6 +12,23 @@
   width: 25%;
   height: 100%;
 }
+#container-slider {
+  height: 400px;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+}
+#container-slider div {
+  width: 100%;
+}
+
+.arrows {
+  background-color: #e9b5d1;
+  color: rgb(37, 37, 37);
+  font-weight: bold;
+  margin-left: 30px;
+  margin-right: 30px;
+}
 .b1 {
   margin-top: 25px;
   height: 30px;
@@ -23,6 +40,7 @@
 }
 .b2 {
   display: flex;
+  cursor: pointer;
 }
 
 .b31 {

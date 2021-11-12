@@ -2,7 +2,7 @@ body {
   margin: 0px;
   padding: 0px;
 }
-#container {
+#container-slider {
   height: 400px;
   width: 90%;
   margin: auto;
@@ -13,11 +13,39 @@ body {
   color: rgb(255, 255, 255);
   font-weight: bold;
 }
+#sort1 {
+  width: 80%;
+  margin: auto;
+  height: 60px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border: 1px solid rgb(236, 236, 236);
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+select {
+  width: 140px;
+  height: 70px;
+  font-size: 15px;
+  border: none;
+  border-right: 1px solid rgba(202, 202, 202, 0.575);
+  color: rgb(139, 139, 139);
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  margin-left: 20px;
+}
+#details {
+  position: absolute;
+  margin-top: 181px;
+  padding-left: 8px;
+}
+#details > p:nth-child(2) {
+  font-weight: bold;
+}
+
 img {
-  height: inherit;
+  height: 30%;
   width: inherit;
   z-index: 1;
-
 }
 .content {
   width: 90%;
