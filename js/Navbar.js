@@ -181,6 +181,15 @@ window.addEventListener("load",function(){
         window.location.href="../Home.html";
     });
 
+    var brand_nav=document.getElementById("brand_nav");
+    brand_nav.addEventListener("click",function(){
+        window.location.href="../Brand.html";
+    });
+    var offer_nav=document.getElementById("offer_nav");
+    offer_nav.addEventListener("click",function(){
+        window.location.href="../Offer.html";
+    });
+    
     var cart_btn_11=document.getElementById("cart_btn_11");
     cart_btn_11.style.cursor="pointer";
     cart_btn_11.addEventListener("click",function(){
