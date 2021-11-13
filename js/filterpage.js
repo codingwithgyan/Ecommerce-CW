@@ -94,6 +94,8 @@ window.addEventListener("load",function(){
         });
        
         both_div[i].addEventListener("click",function(){
+            var details=this.parentElement.firstChild.firstChild.getAttribute("value");
+            localStorage.setItem("currentProduct",details);
             window.location.href="../Product.html";
 
         });

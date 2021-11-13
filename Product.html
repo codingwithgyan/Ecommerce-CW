@@ -1,5 +1,7 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="css/Product.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,56 +10,110 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
 
-    <link rel="stylesheet" href="css/Product.css" />
+    <link rel="stylesheet" href="css/Navbar.css" />
+    <script type="text/javascript" src="js/Navbar.js"></script>
+    <script src="js/Product.js"></script>
   </head>
   <body>
+    <!-- ----------------------------header start-------------------- -->
+    <!-- 1st row -->
+    <div id="container-main">
+      <div>
+        <div class="b1">
+          <div>What are you looking for ?</div>
+          <div><i class="fas fa-search"></i></div>
+        </div>
+      </div>
+      <div class="b2">
+        <img
+          style="height: 100%; width: 50%"
+          src="https://media6.ppl-media.com/static/purplle/img/purplle-logo-1.svg"
+          alt=""
+        />
+        <img
+          style="margin-top: 30px; height: 40%; width: 15%"
+          src="https://media6.ppl-media.com/mediafiles/ecomm/promo/1537798844_try-logo-3x.png"
+          alt=""
+        />
+      </div>
+      <div class="b3">
+        <div class="b31">
+          <div id="wish_btn_11"><i class="far fa-heart"></i></div>
+          <div id="profile_btn_11"><i class="far fa-smile"></i></div>
+          <div id="cart_btn_11"><i class="fas fa-cart-arrow-down"></i></div>
+        </div>
+      </div>
+    </div>
+    <div id="container-nav">
+      <div id="cat"><i class="fas fa-stream"></i>SHOP CATEGORIES</div>
+      <div id="brand_nav">BRANDS</div>
+      <div id="offer_nav">OFFERS</div>
+      <div><a href="Viewproducts.html">ALL PRODUCTS</a></div>
+    </div>
+    <div id="category"></div>
+    <div id="view">
+      <div id="type_1"></div>
+      <div id="type_2"></div>
+      <div id="type_3"></div>
+      <div id="type_4"></div>
+    </div>
+    <!-- ---------------------------------------header end------------------------------- -->
+
     <div class="product-container">
       <div class="side-container">
         <div>
-          <a href="#">
-            <img
-              src="https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/8191/biotique-morning-nectar-moisturizing-lotion-bio-lotion-210-ml_1_display_1544606472_78de71d6.jpg"
-            />
-          </a>
+          <img
+            id="pro_img1"
+            src="https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/8191/biotique-morning-nectar-moisturizing-lotion-bio-lotion-210-ml_1_display_1544606472_78de71d6.jpg"
+          />
         </div>
         <div>
-          <a href="#">
-            <img
-              src="https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/8191/biotique-morning-nectar-moisturizing-lotion-bio-lotion-210-ml_2_display_1544606472_45ce8feb.jpg"
-            />
-          </a>
+          <img
+            id="pro_img2"
+            src="https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/8191/biotique-morning-nectar-moisturizing-lotion-bio-lotion-210-ml_2_display_1544606472_45ce8feb.jpg"
+          />
         </div>
         <div>
-          <a href="#">
-            <img
-              src="https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/8191/biotique-morning-nectar-moisturizing-lotion-bio-lotion-210-ml_3_display_1544606473_3a6cf863.jpg"
-            />
-          </a>
+          <img
+            id="pro_img3"
+            src="https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/8191/biotique-morning-nectar-moisturizing-lotion-bio-lotion-210-ml_3_display_1544606473_3a6cf863.jpg"
+          />
         </div>
       </div>
       <div class="main-container">
-        <a href="#">
-          <img
-            src="https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/8191/biotique-morning-nectar-moisturizing-lotion-bio-lotion-210-ml_1_display_1544606472_78de71d6.jpg"
-          />
-        </a>
+        <img
+          id="pro_img4"
+          src="https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/8191/biotique-morning-nectar-moisturizing-lotion-bio-lotion-210-ml_1_display_1544606472_78de71d6.jpg"
+        />
       </div>
       <div class="right-container">
         <div class="name">
-          <h1>
+          <h1 id="pro_name">
             Biotique Morning Nectar Visibly Flawless Skin Moisturizer (190 ml)
           </h1>
-          <h4>4.5 <span class="fa fa-star checked"></span></h4>
-          <h2>₹196</h2>
-          <button class="cart">ADD TO CART</button>
-          <button class="save">SAVE</button>
+          <div>
+            <h4>4.5 <span class="fa fa-star checked"></span></h4>
+            <p>1527 Ratings | 1007 Reviews</p>
+          </div>
+          <h2 id="pro_price">
+            ₹196 <s>MRP280</s> <span>Save ₹84 (30%)off</span>
+          </h2>
+          <button id="cart_btn">ADD TO CART</button>
+          <button id="wish_btn">SAVE</button>
         </div>
       </div>
     </div>
     <div class="prod-highlite">
-      <h1>Product Heights</h1>
-      <p>
+      <h1>PRODUCT DESCRIPTION</h1>
+      <hr />
+      <p id="pro_desc">
         This lightening and nourishing lotion is blended with pure honey, wheat
         germ and seaweed. It is absorbed into the skin to replace natural oils
         and replenish lost moisture for a noticeably fresher, fairer complexion.
