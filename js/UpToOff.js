@@ -20,8 +20,7 @@ displayItem();
 // Adding functionality to cart button
 
  var products_data=JSON.parse(localStorage.getItem("products"));
- var user_data=JSON.parse(localStorage.getItem("user"));
- var currentUser_data=JSON.parse(localStorage.getItem("currentUser"));   
+ var user_data=JSON.parse(localStorage.getItem("user"));  
 
  var cart_btn=document.getElementsByClassName("cart_btn");
  var wish_btn=document.getElementsByClassName("wish_btn");
@@ -29,6 +28,14 @@ displayItem();
  for(var i=0;i<cart_btn.length;i++)
  {
      cart_btn[i].addEventListener("click",function(){
+        var currentUser_data= localStorage.getItem("currentUser");
+    
+        if(currentUser_data==null || currentUser_data=="")
+        {
+            alert("please login first");
+            window.location.href="../Signin.html";
+        }
+        currentUser_data =JSON.parse(currentUser_data);
         var index=+this.getAttribute("value");
         var obj=products_data[index];
         for(var j=0;j<user_data.length;j++)
@@ -50,6 +57,14 @@ displayItem();
      });
 
      wish_btn[i].addEventListener("click",function(){
+        var currentUser_data= localStorage.getItem("currentUser");
+    
+        if(currentUser_data==null || currentUser_data=="")
+        {
+            alert("please login first");
+            window.location.href="../Signin.html";
+        }
+        currentUser_data =JSON.parse(currentUser_data);
          var index=+this.getAttribute("value");
          var obj=products_data[index];
          for(var j=0;j<user_data.length;j++)

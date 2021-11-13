@@ -1,5 +1,12 @@
 window.addEventListener("load",function(){
-   
+    var currentUser_data= localStorage.getItem("currentUser");
+    
+    if(currentUser_data==null || currentUser_data=="")
+    {
+        alert("please login first");
+        window.location.href="../Signin.html";
+    }
+    currentUser_data=JSON.parse(currentUser_data);   
 
  var home=document.getElementsByClassName("b2");
  home[0].addEventListener("click",function(){

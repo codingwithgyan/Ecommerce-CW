@@ -1,5 +1,5 @@
 window.addEventListener("load",function(){
-   
+  
     // ----------------SLIDER SCRIPT START---------------------
     var checkbox = document.querySelector(".glide");
     var obj = {
@@ -45,7 +45,7 @@ window.addEventListener("load",function(){
  
     var products_data=JSON.parse(localStorage.getItem("products"));
     var user_data=JSON.parse(localStorage.getItem("user"));
-    var currentUser_data=JSON.parse(localStorage.getItem("currentUser"));   
+    
 
     var cart_btn=document.getElementsByClassName("cart_btn");
     var wish_btn=document.getElementsByClassName("wish_btn");
@@ -53,6 +53,14 @@ window.addEventListener("load",function(){
     for(var i=0;i<cart_btn.length;i++)
     {
         cart_btn[i].addEventListener("click",function(){
+            var currentUser_data= localStorage.getItem("currentUser");
+    
+            if(currentUser_data==null || currentUser_data=="")
+            {
+                alert("please login first");
+                window.location.href="../Signin.html";
+            }
+            currentUser_data=JSON.parse(currentUser_data);
            var index=+this.getAttribute("value");
            var obj=products_data[index];
            for(var j=0;j<user_data.length;j++)
@@ -74,6 +82,14 @@ window.addEventListener("load",function(){
         });
 
         wish_btn[i].addEventListener("click",function(){
+            var currentUser_data= localStorage.getItem("currentUser");
+    
+            if(currentUser_data==null || currentUser_data=="")
+            {
+                alert("please login first");
+                window.location.href="../Signin.html";
+            }
+            currentUser_data=JSON.parse(currentUser_data);
             var index=+this.getAttribute("value");
             var obj=products_data[index];
             for(var j=0;j<user_data.length;j++)

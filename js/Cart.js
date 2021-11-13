@@ -1,5 +1,12 @@
 window.addEventListener("load",function(){
-    var currentUser=JSON.parse(localStorage.getItem("currentUser"));
+    var currentUser= localStorage.getItem("currentUser");
+    
+    if(currentUser==null || currentUser=="")
+    {
+        alert("please login first");
+        window.location.href="../Signin.html";
+    }
+    currentUser =JSON.parse(currentUser);
 var user_data=JSON.parse(localStorage.getItem("user"));
 
 for(var i=0;i<user_data.length;i++)
@@ -10,6 +17,7 @@ for(var i=0;i<user_data.length;i++)
        
         break;
     }
+    
 }
 
 var b2=document.getElementsByClassName("b2");
@@ -22,7 +30,6 @@ var b2=document.getElementsByClassName("b2");
 var totalCost=0;
 var savings=0;  
 function displaycart(cartitems){
- 
     if(cartitems!=null && cartitems.length!=0)
     {
         cartitems.map(function(item){

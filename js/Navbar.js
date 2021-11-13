@@ -1,4 +1,39 @@
 window.addEventListener("load",function(){
+
+    var login_btn=document.getElementById("login_btn");
+    if(login_btn!=null)
+    {
+        login_btn.addEventListener("click",function(){
+            window.location.href="../Signin.html";
+        });
+    }
+    
+    var currentUser= localStorage.getItem("currentUser");
+    
+    if(!(currentUser==null || currentUser==""))
+    {  
+        var login_btn=document.getElementById("login_btn");
+        if(login_btn!=null)
+        {
+            login_btn.innerHTML="<button>Logout</button>";
+            login_btn.removeEventListener("click",function(){});
+            login_btn.addEventListener("click",function(){
+               localStorage.setItem("currentUser","");
+               alert("logged out successfully");
+               window.location.href="../Home.html";
+            });
+            var signup_btn=document.getElementById("signup_btn");
+            signup_btn.style.display="none";
+        }
+       
+        
+    }
+
+   
+   
+
+
+
     var container=document.getElementById("cat");
     var category=document.getElementById("category");
     var view=document.getElementById("view");
@@ -200,5 +235,25 @@ window.addEventListener("load",function(){
     wish_btn_11.addEventListener("click",function(){
         window.location.href="../Wishlist.html";
     });
+
+    var profile_btn_11=document.getElementById("profile_btn_11");
+    var profile_div=document.getElementById("profile_div");
+    var clicked=true;
+    profile_btn_11.addEventListener("click",function(){
+       
+        if(clicked==true)
+        {
+            profile_div.style.display="block";
+            clicked=false;
+        }
+        else
+        {
+            profile_div.style.display="none";
+            clicked=true;
+        }
+       
+    });
+
+   
 
 });

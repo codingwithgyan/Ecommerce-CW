@@ -1,4 +1,13 @@
 window.addEventListener("load",function(){
+    var currentUser_data= localStorage.getItem("currentUser");
+    
+    if(currentUser_data==null || currentUser_data=="")
+    {
+        alert("please login first");
+        window.location.href="../Signin.html";
+    }
+    currentUser_data=JSON.parse(currentUser_data);
+
     var paymentmode=document.querySelector("#changeMode")
 var carttotal=JSON.parse(localStorage.getItem("cartTotal"))
 fn();
@@ -97,7 +106,15 @@ function fn()
          { 
             
             var user_data=JSON.parse(localStorage.getItem("user"));
-            var currentUser=JSON.parse(localStorage.getItem("currentUser"));
+            var currentUser= localStorage.getItem("currentUser");
+    
+            if(currentUser==null || currentUser=="")
+            {
+                alert("please login first");
+                window.location.href="../Signin.html";
+            }
+            currentUser=JSON.parse(currentUser);
+
             if(user_data!=null)
             {
                 for(var i=0;i<user_data.length;i++)
@@ -115,6 +132,7 @@ function fn()
                             localStorage.setItem("user",JSON.stringify(user_data));
                             localStorage.setItem("cartTotal","0");
                             alert("Order Complete");
+                            window.location.href="../Myorder.html";
                             break;
                         }
                         else
@@ -126,7 +144,7 @@ function fn()
                        
                     }
                 }
-                window.location.href="../Home.html";
+               
             }
             else
             {

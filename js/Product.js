@@ -40,8 +40,16 @@ window.addEventListener("load",function(){
     var cart_btn=document.getElementById("cart_btn");
     var wish_btn=document.getElementById("wish_btn");
     var user_data=JSON.parse(localStorage.getItem("user"));
-    var currentUser_data=JSON.parse(localStorage.getItem("currentUser"));
     cart_btn.addEventListener("click",function(){
+        var currentUser_data= localStorage.getItem("currentUser");
+    
+            if(currentUser_data==null || currentUser_data=="")
+            {
+                alert("please login first");
+                window.location.href="../Signin.html";
+            }
+            currentUser_data=JSON.parse(currentUser_data);
+
         var obj=products_data[index];
         for(var j=0;j<user_data.length;j++)
         {
@@ -62,6 +70,14 @@ window.addEventListener("load",function(){
      });
 
      wish_btn.addEventListener("click",function(){
+        var currentUser_data= localStorage.getItem("currentUser");
+    
+            if(currentUser_data==null || currentUser_data=="")
+            {
+                alert("please login first");
+                window.location.href="../Signin.html";
+            }
+            currentUser_data=JSON.parse(currentUser_data);
         var obj=products_data[index];
         for(var j=0;j<user_data.length;j++)
         {
