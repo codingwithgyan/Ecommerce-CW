@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind&family=Roboto&family=Zen+Kaku+Gothic+Antique&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/Cart.css" />
+    <script type="text/javascript" src="js/Cart.js"></script>
+  </head>
+  <body>
+    <!-- ---------------------------Header-------------------------------- -->
+    <div id="container-main">
+      <div>
+        <div class="b1">
+          <div>What are you looking for ?</div>
+          <div><i class="fas fa-search"></i></div>
+        </div>
+      </div>
+      <div class="b2">
+        <img
+          style="height: 100%; width: 50%"
+          src="https://media6.ppl-media.com/static/purplle/img/purplle-logo-1.svg"
+          alt=""
+        />
+        <img
+          style="margin-top: 30px; height: 40%; width: 15%"
+          src="https://media6.ppl-media.com/mediafiles/ecomm/promo/1537798844_try-logo-3x.png"
+          alt=""
+        />
+      </div>
+      <div class="b3">
+        <div class="b31">
+          <div id="wish_btn_11"><i class="far fa-heart"></i></div>
+          <div id="profile_btn_11"><i class="far fa-smile"></i></div>
+          <div id="cart_btn_11"><i class="fas fa-cart-arrow-down"></i></div>
+          <div id="profile_div">
+            <p id="login_btn"><button>Sign In</button></p>
+            <p id="signup_btn">
+              <a href="Signup.html">New Customer? Start here</a>
+            </p>
+            <p><a href="Myorder.html">Your Order</a></p>
+            <p><a href="Wishlist.html">View Wishlist</a></p>
+            <p><a href="Cart.html">View Cart</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div style="position: fixed; top: 0px; background-color: black;"> <h1>my cart1111111111111111111111111111111111111111111111111</h1></div> -->
+    <div class="cover">
+      <div class="cart">
+        <!-- <div id="coupon">
+          <h4>Available offers</h4>
+          <div>
+            <span>**Flat 30% percent discount-</span
+            ><a class="viewproducttext" href="#">T&C/View products</a>
+          </div>
+          <div>
+            <span>**15% OFF ON new arival-</span
+            ><a class="viewproducttext" href="#">T&C/View products</a>
+          </div>
+          <div>
+            <span
+              >**Exclusively for first time buyer Use cupon code
+              DISCOUNT15</span
+            >
+          </div>
+          <div>
+            <span>
+              **For first time buyer use cuppon code WELCOME 5% discount</span
+            >
+          </div>
+        </div> -->
+        <div id="carttital">
+          <span>MY CART</span><span><a href="Home.html">SHOP MORE ></a></span>
+        </div>
+        <br />
+      </div>
+
+      <div class="total">
+        <div id="assurediv">
+          <div id="assureimgdiv">
+            <img
+              src="https://media6.ppl-media.com/mediafiles/ecomm/misc/1515664301_shield.png"
+              alt=""
+            />
+          </div>
+          <div id="assuretag">
+            <span>100% Safe Payment</span><br />
+            <span>Genune products | Easy retun</span>
+          </div>
+        </div>
+        <div id="coupondiv">
+          <input placeholder="Enter Promocode" id="promocode" />
+          <span id="checkpromo" style="color: #e40980">Apply Promo</span>
+          <br />
+          <span id="promomsg"></span>
+          <hr />
+        </div>
+        <div id="pincodediv">
+          <input placeholder="Enter Pincode" id="pincode" type="number" />
+          <span id="checkpin">CHECK DELIVERY</span>
+          <br />
+          <span id="pinmsg"></span>
+          <hr />
+        </div>
+        <div id="pricediv">
+          <div><span>Price Details</span></div>
+          <div><span></span></div>
+          <div><span>Total MRP:</span></div>
+          <div><span id="TotalMRP"></span></div>
+          <div><span>Saving on MRP:</span></div>
+          <div><span id="savingOnMRP" style="color: #e40980"></span></div>
+          <div><span>SubTotal:</span></div>
+          <div><span id="subtotal"></span></div>
+          <div><span>Shipping charges:</span></div>
+          <div><span id="shoppingcharges" style="color: #e40980"></span></div>
+        </div>
+
+        <br />
+        <hr />
+        <div id="totalpricediv">
+          <div><span>Order Total:</span></div>
+          <div><span id="Ordertotal"></span></div>
+          <div><span>You save:</span></div>
+          <div><span id="yousave" style="color: #e40980"></span></div>
+        </div>
+        <br />
+        <button id="placeorderbutton">PLACE ORDER</button>
+
+        <span>Need help ? 8655500222</span>
+      </div>
+    </div>
+  </body>
+</html>

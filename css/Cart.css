@@ -1,0 +1,228 @@
+/* ----------------------------HEADER START ------------------------- */
+#container-main {
+  border-bottom: 1px solid rgb(228, 228, 228);
+  width: 80%;
+  height: 100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+#container-main > div {
+  width: 25%;
+  height: 100%;
+}
+.b1 {
+  margin-top: 25px;
+  height: 30px;
+  width: 300px;
+  display: flex;
+  border-bottom: 2px solid rgb(250, 94, 120);
+  display: flex;
+  justify-content: space-between;
+}
+.b2 {
+  display: flex;
+  cursor: pointer;
+}
+
+.b31 {
+  height: 50%;
+  width: 50%;
+  margin: auto;
+  margin-top: 30px;
+  font-size: 45px;
+  display: flex;
+  justify-content: space-between;
+  color: rgb(150, 150, 150);
+}
+
+/* -----------------------HEADER END -------------------- */
+
+.cover {
+  width: 70%;
+  display: flex;
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
+  margin: auto;
+  letter-spacing: 2px;
+  margin-top: 20px;
+}
+
+.cart {
+  width: 60%;
+  text-align: justify;
+}
+#coupon {
+  width: 100%;
+  margin-bottom: 20px;
+  box-shadow: gray 0px 0px 5px;
+}
+a {
+  text-decoration: none;
+  color: #e40980;
+}
+#coupon > div {
+  border-bottom: 1px solid #74043e;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.viewproducttext {
+  color: #e40980;
+}
+#carttital {
+  color: #e40980;
+  font-weight: 600;
+}
+#carttital > span:nth-child(2) {
+  float: right;
+}
+
+#main {
+  padding: 15px;
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  box-shadow: gray 2px 2px 5px;
+}
+#imgDiv {
+  width: 20%;
+  height: 98%;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+#details {
+  width: 80%;
+  height: 100%;
+}
+h3 {
+  margin-left: 20px;
+  margin-bottom: 5px;
+  font-weight: lighter;
+}
+#details > p,
+#lable {
+  margin: 0px 0px;
+  margin-left: 20px;
+  font-size: 15px;
+}
+.total {
+  padding: 40px;
+  text-align: center;
+  position: fixed;
+  float: right;
+  left: 60%;
+  box-shadow: gray 1px 1px 5px;
+  margin-top: -112px;
+  background-color: white;
+}
+
+#qty {
+  height: 10px;
+  width: 30px;
+  margin-left: 10px;
+  margin-top: 0;
+  font-size: 15px;
+  border-radius: 3px;
+}
+
+#assurediv {
+  border: solid black 1px;
+  height: 50px;
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+  margin: auto;
+  margin-bottom: 10px;
+}
+#assureimgdiv {
+  height: 80%;
+  width: 12%;
+  margin-top: 2%;
+  margin-left: 3%;
+}
+#assuretag {
+  height: 100%;
+  width: 80%;
+  margin-left: 5%;
+}
+#assuretag > span:nth-child(1) {
+  color: red;
+  font-size: 100%;
+  font-weight: 300;
+}
+#assuretag > span:nth-child(3) {
+  font-size: 80%;
+}
+
+#pincodediv,
+#coupondiv {
+  height: 70px;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 5px;
+}
+#pincodediv > input {
+  height: 40%;
+  border: none;
+  outline: none;
+  font-size: 100%;
+  width: 33.5%;
+}
+#coupondiv > input {
+  height: 40%;
+  border: none;
+  outline: none;
+  font-size: 100%;
+  width: 33.5%;
+}
+
+#pincodediv > span {
+  color: #e40980;
+}
+
+input {
+  color: #e40980;
+}
+#pricediv,
+#totalpricediv {
+  width: 100%;
+  margin: auto;
+  text-align: left;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5%;
+}
+
+#pricediv > div {
+  width: 100%;
+  font-size: 12px;
+}
+#pricediv > div:nth-child(even) {
+  text-align: right;
+}
+#totalpricediv > div {
+  width: 100%;
+  font-size: 12px;
+}
+#totalpricediv > div:nth-child(even) {
+  text-align: right;
+}
+#pricediv > div:nth-child(1) {
+  font-weight: 600;
+}
+#totalpricediv > div:nth-child(1),
+#totalpricediv > div:nth-child(2) {
+  font-size: 15px;
+  font-weight: 600;
+}
+#placeorderbutton {
+  width: 90%;
+  height: 45px;
+  background-color: #e40980;
+  color: white;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}

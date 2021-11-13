@@ -1,0 +1,129 @@
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: normal;
+}
+.product-container {
+  margin-top: 20px;
+  display: flex;
+}
+p.page {
+  font-family: serif;
+  font-weight: normal;
+  font-size: 16px;
+}
+.side-container > div {
+  border: 1px solid #c1c6ca;
+  width: 79px;
+  height: 79px;
+  margin-bottom: 22%;
+  margin-left: 100%;
+}
+.main-container {
+  border: 1px solid #c1c6ca;
+  width: 430px;
+  height: 430px;
+  margin-left: 8%;
+}
+.main-container img {
+  height: 100%;
+  width: 100%;
+}
+.b1 > div {
+  font-family: serif;
+  font-weight: normal;
+}
+.name h4 {
+  border: 1px solid transparent;
+  width: 66px;
+  border-radius: 10%;
+  background-color: #27aa0b;
+  color: white;
+  padding: 5px 5px;
+}
+.right-container {
+  margin-left: 5%;
+  width: 48%;
+}
+.name button {
+  font-size: 20px;
+  padding: 15px 30px;
+  border-radius: 5%;
+  margin-top: 5%;
+}
+#cart_btn {
+  background-color: deeppink;
+  color: white;
+  border: transparent;
+  cursor: pointer;
+}
+#wish_btn {
+  background-color: white;
+  color: deeppink;
+  border: 1px solid #c1c6ca;
+  cursor: pointer;
+}
+.name h1 {
+  color: #2c414c;
+  font-weight: normal;
+  font-size: 16px;
+}
+.prod-highlite {
+  width: 90%;
+  height: 100px;
+  margin-left: 5%;
+  margin-bottom: 12%;
+}
+.prod-highlite h1 {
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 0px;
+  margin-top: 5%;
+}
+.prod-highlite p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: normal;
+  color: #686864;
+}
+.name {
+  margin-right: 10%;
+}
+.name h1 {
+  font-size: 20px;
+}
+.checked {
+  font-size: 12px;
+}
+.name h2 span {
+  font-family: sans-serif;
+  color: deeppink;
+  font-weight: normal;
+  font-size: 18px;
+}
+.name > div {
+  display: flex;
+  line-height: 0px;
+}
+.name h2 s {
+  font-family: serif;
+  font-weight: normal;
+  font-size: 14px;
+  color: #a0a092;
+}
+.name > div p {
+  font-size: 17px;
+  font-family: serif;
+  font-weight: normal;
+  color: #a0a092;
+  margin-top: 9%;
+  margin-left: 3%;
+}
+img {
+  height: 100%;
+  width: 100%;
+}
+
+#pro_img1,
+#pro_img2,
+#pro_img3 {
+  cursor: pointer;
+}
