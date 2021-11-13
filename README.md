@@ -7,15 +7,16 @@ After opening the file in browser just click on the button and dummy data will b
 
 # Features Available
 
-=> User can signup and signin easily.
-=> User can add any product to cart and can move to payment page
-=> User can also add product to wishlist and can buy it later.
-=> User can view any product according to the brand also.
+=> User can signup and signin easily.<br>
+=> User can add any product to cart and can move to payment page<br>
+=> User can also add product to wishlist and can buy it later.<br>
+=> User can view any product according to the brand also.<br>
 => User can also view all product of any type or subtype.
-Admin
-======
-Most of the part in the website is dynamic.
-=> Navbar is totally dynamic , Admin can add more category , type and subtype.
-=> Admin can add brands
-=> Admin can add products of certain brand ,type , or subtype
-=> Admin can also add offers to a product
+
+# Admin
+
+Most of the part in the website is dynamic.<br>
+=> Navbar is totally dynamic , Admin can add more category , type and subtype<br>
+=> Admin can add brands<br>
+=> Admin can add products of certain brand ,type , or subtype<br>
+=> Admin can also add offers to a product.<br>
