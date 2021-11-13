@@ -1,0 +1,137 @@
+#myAcCover {
+  margin: auto;
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
+  letter-spacing: 2px;
+}
+#back {
+  width: 100%;
+  height: 150px;
+  margin: auto;
+  margin-top: 50px;
+  background-color: #e40980;
+}
+#titals {
+  width: 90%;
+  height: 110px;
+  background-color: white;
+  position: relative;
+  top: 70px;
+  margin: auto;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  display: flex;
+}
+#titals > div {
+  padding-top: 10px;
+  height: 100%;
+  width: 15%;
+  margin-left: 2%;
+  text-align: center;
+}
+
+#profilePic {
+  height: 12%;
+  width: 20%;
+  position: relative;
+  top: 90px;
+  left: 43%;
+  display: flex;
+}
+#photo {
+  border: 1px black solid;
+  height: 100%;
+  width: 30%;
+  border-radius: 100%;
+}
+img {
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+}
+ul {
+  list-style-type: none;
+  overflow: hidden;
+}
+li {
+  padding: 70px;
+  display: inline;
+}
+h2 {
+  font-weight: lighter;
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
+  font-size: 15px;
+}
+#userdata {
+  /* border: #e40980 solid 1px; */
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  height: 300px;
+  width: 80%;
+  margin: auto;
+  margin-top: 100px;
+}
+#tital {
+  font-size: 20px;
+  color: #e40980;
+  margin-left: 20px;
+}
+input {
+  width: 300px;
+  margin: 20px 20px;
+  border: none;
+  border-bottom: 1px solid #000;
+  font-size: 20px;
+}
+lable {
+  font-size: 20px;
+  color: #e40980;
+  margin-left: 20px;
+}
+button {
+  width: 200px;
+  height: 30px;
+  margin-top: 40px;
+  font-size: 20px;
+  margin-left: 20px;
+  background-color: #e40980;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+#infodiv {
+  width: 100%;
+  height: 250px;
+  margin-top: 20px;
+  display: flex;
+}
+#infodiv > div {
+  border: gray solid 1px;
+  width: 33.3%;
+  height: 100%;
+}
+.img {
+  width: 30%;
+  height: 50%;
+  margin: auto;
+  margin-bottom: 10px;
+}
+.infohead,
+.info {
+  margin: 0px;
+  text-align: center;
+  font-weight: lighter;
+  margin-bottom: 10px;
+}
+.info {
+  font-size: 12px;
+}
+#welcometext {
+  font-size: 27px;
+  color: #e40980;
+  letter-spacing: 5px;
+  padding-top: 100px;
+}
+#textbox {
+  margin-left: 20px;
+  margin-top: 5px;
+}

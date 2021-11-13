@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/glide.core.min.css" />
+    <link rel="stylesheet" href="css/glide.theme.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/footer.css" />
+
+    <link rel="stylesheet" href="css/Navbar.css" />
+    <script type="text/javascript" src="js/Navbar.js"></script>
+    <link rel="stylesheet" href="css/Viewproducts.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script src="js/filterpage.js"></script>
+  </head>
+  <body>
+    <!-- ----------------------------header start-------------------- -->
+    <!-- 1st row -->
+    <div id="container-main">
+      <div>
+        <div class="b1">
+          <div>What are you looking for ?</div>
+          <div><i class="fas fa-search"></i></div>
+        </div>
+      </div>
+      <div class="b2">
+        <img
+          style="height: 100%; width: 50%"
+          src="https://media6.ppl-media.com/static/purplle/img/purplle-logo-1.svg"
+          alt=""
+        />
+        <img
+          style="margin-top: 30px; height: 40%; width: 15%"
+          src="https://media6.ppl-media.com/mediafiles/ecomm/promo/1537798844_try-logo-3x.png"
+          alt=""
+        />
+      </div>
+      <div class="b3">
+        <div class="b31">
+          <div id="wish_btn_11"><i class="far fa-heart"></i></div>
+          <div id="profile_btn_11"><i class="far fa-smile"></i></div>
+          <div id="cart_btn_11"><i class="fas fa-cart-arrow-down"></i></div>
+          <div id="profile_div">
+            <p id="login_btn"><button>Sign In</button></p>
+            <p id="signup_btn">
+              <a href="Signup.html">New Customer? Start here</a>
+            </p>
+            <p><a href="Myorder.html">Your Order</a></p>
+            <p><a href="Wishlist.html">View Wishlist</a></p>
+            <p><a href="Cart.html">View Cart</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="container-nav">
+      <div id="cat"><i class="fas fa-stream"></i>SHOP CATEGORIES</div>
+      <div id="brand_nav">BRANDS</div>
+      <div id="offer_nav">OFFERS</div>
+      <div><a href="Viewproducts.html">ALL PRODUCTS</a></div>
+    </div>
+    <div id="category"></div>
+    <div id="view">
+      <div id="type_1"></div>
+      <div id="type_2"></div>
+      <div id="type_3"></div>
+      <div id="type_4"></div>
+    </div>
+    <!-- ---------------------------------------header end------------------------------- -->
+    <div id="container">
+      <div class="glide">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <li class="glide__slide">
+              <img
+                src="https://media6.ppl-media.com/mediafiles/ecomm/misc/1628770025_nybae-web-brand-banner.jpg"
+                alt=""
+                srcset=""
+              />
+            </li>
+            <li class="glide__slide">
+              <img
+                src="https://media6.ppl-media.com/mediafiles/ecomm/misc/1636687497_web-brand-banner-4.gif?tr=f-gif"
+                alt=""
+                srcset=""
+              />
+            </li>
+            <li class="glide__slide">
+              <img
+                src="https://media6.ppl-media.com/mediafiles/ecomm/misc/1636645794_livon_web.jpg"
+                alt=""
+                srcset=""
+              />
+            </li>
+            <li class="glide__slide">
+              <img
+                src="https://media6.ppl-media.com/mediafiles/ecomm/misc/1636272247_lakme_webbrand.jpg"
+                alt=""
+                srcset=""
+              />
+            </li>
+          </ul>
+        </div>
+        <div class="glide__arrows" data-glide-el="controls">
+          <button
+            class="glide__arrow glide__arrow--left arrows"
+            data-glide-dir="<"
+          >
+            &leftarrow;
+          </button>
+          <button
+            class="glide__arrow glide__arrow--right arrows"
+            data-glide-dir=">"
+          >
+            &rightarrow;
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="sort1">
+      <select name="" id="sort_price">
+        <option value="">Sort By Price</option>
+        <option value="htl">High To Low</option>
+        <option value="lth">Low To High</option>
+      </select>
+
+      <select name="" id="sort_offer">
+        <option value="">Sort By offer</option>
+        <option value="htl">High To Low</option>
+        <option value="lth">Low To High</option>
+      </select>
+    </div>
+    <div id="show">
+      <h3></h3>
+      <div class="content">
+        <h4>No data available</h4>
+      </div>
+    </div>
+
+    <!-- /------------------------------------FOOTER-------------------------- -->
+    <div class="vid-pic">
+      <div class="vid">
+        <div class="heading">
+          <p>Spotlight</p>
+        </div>
+        <div class="video">
+          <iframe
+            width="400"
+            height="225"
+            src="https://www.youtube.com/embed/NrI9d0XiP7M"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+      <div class="pic">
+        <div class="heading">
+          <p>Shop on the go</p>
+        </div>
+        <div class="photo">
+          <div class="content-foot">
+            <p>
+              The Purplle BFF APP is now fully loaded! Get downloading now on
+              both iOS & Android
+            </p>
+            <a href="#"
+              ><img
+                src="https://media6.ppl-media.com/mediafiles/ecomm/home/1499247983_google-play.png"
+            /></a>
+            <div>
+              <a href="#"
+                ><img
+                  src="https://media6.ppl-media.com/mediafiles/ecomm/home/1499247967_app-store.png"
+              /></a>
+            </div>
+          </div>
+          <div class="img">
+            <img
+              src="https://media6.ppl-media.com/mediafiles/ecomm/home/1499247958_shop-on-the-go.png"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="para-cont">
+      <div>
+        <p>
+          <span><a href="#">Makeup:</a></span>
+        </p>
+        <div>
+          <p>
+            <a href="#">Primer</a>/<a href="#">Lipstick</a>/<a href="#"
+              >Foundation</a
+            >/<a href="#">Eyeshadow</a>/<a href="#">Eyeliner</a>/<a href="#"
+              >Kajal</a
+            >/<a href="#">Concealer</a>/<a href="#">Nail Polish</a>/<a href="#"
+              >Compact</a
+            >/<a href="#">Mascara</a>/<a href="#">Highlighters & illuminators</a
+            >/<a href="#">Makeup Remover</a>/<a href="#">BB & CC Cream</a>/<a
+              href="#"
+              >Lip Balm & Treatment</a
+            >/<a href="#">Eyebrow Enhancer</a>/<a href="#">Loose Powder</a>/<a
+              href="#"
+              >Blush</a
+            >/<a href="#">Makeup Kits</a>/<a href="#">Setting sprays & fixers</a
+            >/<a href="#">Gel Nail polish</a>
+          </p>
+        </div>
+      </div>
+      <div>
+        <p>
+          <span><a href="#">Skin:</a></span>
+        </p>
+        <div>
+          <p>
+            <a href="#">Face Pack Masks & Peels</a>/<a href="#">
+              Serum & Facial Oils</a
+            >/<a href="#"> Face wash</a>/<a href="#"> Facial Kits</a>/<a
+              href="#"
+            >
+              Face Cream</a
+            >/<a href="#"> Moisturizers</a>/<a href="#"> Toner</a>/<a href="#">
+              Essential & Carrier Oils</a
+            >/<a href="#"> Sheet Masks</a>/<a href="#"> Scrubs & Exfoliators</a
+            >/<a href="#"> Lip Balm & Care</a>/<a href="#"> Sunscreen</a>/<a
+              href="#"
+            >
+              Body Lotions & Moisturizers</a
+            >/<a href="#"> Night Cream</a>/<a href="#">
+              Body Wash & Shower Gels</a
+            >/<a href="#"> Hand Sanitizer</a>/<a href="#"> Face Mist</a>/<a
+              href="#"
+            >
+              Lip Scrub</a
+            >/<a href="#"> Body Creams & Body Butters</a>/<a href="#">
+              Hand Cream</a
+            >
+          </p>
+        </div>
+      </div>
+      <div>
+        <p>
+          <span><a href="#">Hair:</a></span>
+        </p>
+        <div>
+          <p>
+            <a href="#"> Shampoo</a>/<a href="#"> Conditioner</a>/<a href="#">
+              Hair Serum</a
+            >/<a href="#"> Hair Oil</a>/<a href="#"> Hair Spa & Masque</a>/<a
+              href="#"
+            >
+              Hair Treatment</a
+            >/<a href="#"> Baby Shampoo</a>/<a href="#"> Dry Shampoo</a>/<a
+              href="#"
+            >
+              Hair Spa Kits</a
+            >/<a href="#"> Hair Nourishment Kit</a>/<a href="#"> Hair Color</a
+            >/<a href="#"> Hair Nourishment Kit</a>/<a href="#">
+              Hair Spray & Leave-in cream</a
+            >/<a href="#"> Volumizing</a>/<a href="#"> Hair Extensions</a>/<a
+              href="#"
+            >
+              Mousse Gels & Wax</a
+            >/<a href="#"> Hair Styling Tool</a>/<a href="#">
+              Hair Accessories</a
+            >
+          </p>
+        </div>
+      </div>
+      <div>
+        <p>
+          <span><a href="#">Fragrance:</a></span>
+        </p>
+        <div>
+          <p>
+            <a href="#"> Perfumes</a>/<a href="#"> Deodrants & Roll-ons</a>/<a
+              href="#"
+            >
+              Solid Perfumes</a
+            >/<a href="#"> Aftershaves</a>/<a href="#"> Colognes</a>/<a
+              href="#"
+            >
+              Gift & Value sets for men</a
+            >/<a href="#"> Gift & Value sets for men</a>/<a href="#">
+              Gift & Value sets for women</a
+            >
+          </p>
+        </div>
+      </div>
+      <div>
+        <p>
+          <span><a href="#">Collections:</a></span>
+        </p>
+        <div>
+          <p>
+            <a href="#"> Castor Oil</a>/<a href="#"> Pastel Nail Polish</a>/<a
+              href="#"
+            >
+              Lakme 9 to 5</a
+            >/<a href="#"> Black Kajal</a>/<a href="#"> Sunscreen</a>
+          </p>
+        </div>
+      </div>
+      <div>
+        <p>
+          <span><a href="#">Brands:</a></span>
+        </p>
+        <div>
+          <p>
+            <a href="#"> Biotique</a>/<a href="#"> Wow</a>/<a href="#">
+              Dermdoc</a
+            >/<a href="#"> Himalaya</a>/<a href="#"> Darling Isabella</a>/<a
+              href="#"
+            >
+              Maybelline</a
+            >/<a href="#"> Loreal</a>/<a href="#"> Good Vibes</a>/<a href="#">
+              NY Bae</a
+            >/<a href="#"> Stay Quirky</a>/<a href="#"> Aroma Magic</a>/<a
+              href="#"
+            >
+              Alps Goodness</a
+            >/<a href="#"> Lotus</a>/<a href="#"> Purplle</a>/<a href="#">
+              Sugar</a
+            >/<a href="#"> Nivea</a>/<a href="#"> Lakme</a>
+          </p>
+        </div>
+      </div>
+      <div>
+        <p>
+          <span><a href="#">Men:</a></span>
+        </p>
+        <div>
+          <p>
+            <a href="#">Primer</a>/<a href="#">Lipstick</a>/<a href="#"
+              >Foundation</a
+            >/<a href="#">Eyeshadow</a>/<a href="#">Eyeliner</a>/<a href="#"
+              >Kajal</a
+            >/<a href="#">Concealer</a>/<a href="#">Nail Polish</a>/<a href="#"
+              >Compact</a
+            >/<a href="#">Mascara</a>/<a href="#">Highlighters & illuminators</a
+            >/<a href="#">Makeup Remover</a>/<a href="#">BB & CC Cream</a>/<a
+              href="#"
+              >Lip Balm & Treatment</a
+            >/<a href="#">Eyebrow Enhancer</a>/<a href="#">Loose Powder</a>/<a
+              href="#"
+              >Blush</a
+            >/<a href="#">Makeup Kits</a>/<a href="#">Setting sprays & fixers</a
+            >/<a href="#">Gel Nail polish</a>
+          </p>
+        </div>
+      </div>
+      <div>
+        <p>
+          <span><a href="#">Accessories:</a></span>
+        </p>
+        <div>
+          <p>
+            <a href="#">Primer</a>/<a href="#">Lipstick</a>/<a href="#"
+              >Foundation</a
+            >/<a href="#">Eyeshadow</a>/<a href="#">Eyeliner</a>/<a href="#"
+              >Kajal</a
+            >/<a href="#">Concealer</a>/<a href="#">Nail Polish</a>/<a href="#"
+              >Compact</a
+            >/<a href="#">Mascara</a>/<a href="#">Highlighters & illuminators</a
+            >/<a href="#">Makeup Remover</a>/<a href="#">BB & CC Cream</a>/<a
+              href="#"
+              >Lip Balm & Treatment</a
+            >/<a href="#">Eyebrow Enhancer</a>/<a href="#">Loose Powder</a>/<a
+              href="#"
+              >Blush</a
+            >/<a href="#">Makeup Kits</a>/<a href="#">Setting sprays & fixers</a
+            >/<a href="#">Gel Nail polish</a>
+          </p>
+        </div>
+      </div>
+      <div>
+        <p>
+          <span><a href="#">Electronics:</a></span>
+        </p>
+        <div>
+          <p>
+            <a href="#">Primer</a>/<a href="#">Lipstick</a>/<a href="#"
+              >Foundation</a
+            >/<a href="#">Eyeshadow</a>/<a href="#">Eyeliner</a>/<a href="#"
+              >Kajal</a
+            >/<a href="#">Concealer</a>/<a href="#">Nail Polish</a>/<a href="#"
+              >Compact</a
+            >/<a href="#">Mascara</a>/<a href="#">Highlighters & illuminators</a
+            >/<a href="#">Makeup Remover</a>/<a href="#">BB & CC Cream</a>/<a
+              href="#"
+              >Lip Balm & Treatment</a
+            >/<a href="#">Eyebrow Enhancer</a>/<a href="#">Loose Powder</a>/<a
+              href="#"
+              >Blush</a
+            >/<a href="#">Makeup Kits</a>/<a href="#">Setting sprays & fixers</a
+            >/<a href="#">Gel Nail polish</a>
+          </p>
+        </div>
+      </div>
+      <div>
+        <p>
+          <span><a href="#">Wellness:</a></span>
+        </p>
+        <div>
+          <p>
+            <a href="#">Primer</a>/<a href="#">Lipstick</a>/<a href="#"
+              >Foundation</a
+            >/<a href="#">Eyeshadow</a>/<a href="#">Eyeliner</a>/<a href="#"
+              >Kajal</a
+            >/<a href="#">Concealer</a>/<a href="#">Nail Polish</a>/<a href="#"
+              >Compact</a
+            >/<a href="#">Mascara</a>/<a href="#">Highlighters & illuminators</a
+            >/<a href="#">Makeup Remover</a>/<a href="#">BB & CC Cream</a>/<a
+              href="#"
+              >Lip Balm & Treatment</a
+            >/<a href="#">Eyebrow Enhancer</a>/<a href="#">Loose Powder</a>/<a
+              href="#"
+              >Blush</a
+            >/<a href="#">Makeup Kits</a>/<a href="#">Setting sprays & fixers</a
+            >/<a href="#">Gel Nail polish</a>
+          </p>
+        </div>
+      </div>
+      <div>
+        <p>
+          <span><a href="#">Wellness:</a></span>
+        </p>
+        <div>
+          <p>
+            <a href="#">Primer</a>/<a href="#">Lipstick</a>/<a href="#"
+              >Foundation</a
+            >/<a href="#">Eyeshadow</a>/<a href="#">Eyeliner</a>/<a href="#"
+              >Kajal</a
+            >/<a href="#">Concealer</a>/<a href="#">Nail Polish</a>/<a href="#"
+              >Compact</a
+            >/<a href="#">Mascara</a>/<a href="#">Highlighters & illuminators</a
+            >/<a href="#">Makeup Remover</a>/<a href="#">BB & CC Cream</a>/<a
+              href="#"
+              >Lip Balm & Treatment</a
+            >/<a href="#">Eyebrow Enhancer</a>/<a href="#">Loose Powder</a>/<a
+              href="#"
+              >Blush</a
+            >/<a href="#">Makeup Kits</a>/<a href="#">Setting sprays & fixers</a
+            >/<a href="#">Gel Nail polish</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+input,
+select {
+  height: 40px;
+  width: 300px;
+  float: right;
+  margin-top: 2%;
+}
+
+input {
+  width: 295px;
+}
+#btn {
+  height: 50px;
+  float: right;
+  margin-top: 4%;
+  margin-right: 12%;
+  background-color: #58a7dfb6;
+}
+.form {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+#content {
+  margin: auto;
+  width: 50%;
+  margin-top: 6%;
+}
