@@ -9,7 +9,7 @@ var validUsers = JSON.parse(localStorage.getItem("user"));
 
 function signin() {
   // console.log("function")
-  var email = document.querySelector("#username").value;
+  var email = document.querySelector("#username_1").value;
   var pass = document.querySelector("#pass").value;
 
   if (email == "admin@gmail.com" && pass == "12345") {
