@@ -22,7 +22,10 @@ window.addEventListener("load",function(){
  home[0].addEventListener("click",function(){
     window.location.href="../Home.html";
  });
- displayItem();
+
+ var products_data=JSON.parse(localStorage.getItem("products"));
+ var user_data=JSON.parse(localStorage.getItem("user"));
+ displayItem(products_data);
 
 
  //Adding animations and event listners
@@ -43,8 +46,7 @@ window.addEventListener("load",function(){
 
  // Adding functionality to cart button
  
-    var products_data=JSON.parse(localStorage.getItem("products"));
-    var user_data=JSON.parse(localStorage.getItem("user"));
+   
     
 
     var cart_btn=document.getElementsByClassName("cart_btn");
@@ -117,18 +119,62 @@ window.addEventListener("load",function(){
         });
     }
 
+    var sort_price=document.getElementById("sort_price");
+    sort_price.addEventListener("change",function(){
+        if(this.value=="lth")
+        {
+            products_data=products_data.sort(function(a,b)
+            {
+                    return a.price-b.price;
+               
+            });
+        }
+        else
+        {
+            products_data=products_data.sort(function(a,b)
+            {
+                return b.price-a.price;
+               
+            });
+        }
+       
+        displayItem(products_data);
+    });
+
+    var sort_offer=document.getElementById("sort_offer");
+    sort_offer.addEventListener("change",function(){
+        if(this.value=="lth")
+        {
+            products_data=products_data.sort(function(a,b)
+            {
+                    return a.offer-b.offer;
+               
+            });
+        }
+        else
+        {
+            products_data=products_data.sort(function(a,b)
+            {
+                return b.offer-a.offer;
+               
+            });
+        }
+       
+        displayItem(products_data);
+    });
+
+    
 });
 function addCartButton()
 {
 
 }
-function displayItem()
+function displayItem(products_data)
 {
     
     var category_data=JSON.parse(localStorage.getItem("category"));
     var type_data=JSON.parse(localStorage.getItem("type"));
     var subtype_data=JSON.parse(localStorage.getItem("subtype"));
-    var products_data=JSON.parse(localStorage.getItem("products"));
     var currentPage=localStorage.getItem("currentPage");
     var show=document.getElementById("show");
     
@@ -186,7 +232,7 @@ function displayItem()
                     var p1=document.createElement("p");
                     p1.innerHTML=products_data[j].name.substring(0,20)+" ...";
                     var p2=document.createElement("p");
-                    p2.innerHTML="&#8377; "+products_data[j].price;
+                    p2.innerHTML="&#8377; "+products_data[j].price+"&nbsp;&nbsp;&nbsp;<a style='color:#e40980;font-size:13px;'>"+products_data[j].offer+"%</a>";
                     div2_2.append(p1,p2);
                     div_both.append(img,div2_2);
                     div2.append(div_both);
