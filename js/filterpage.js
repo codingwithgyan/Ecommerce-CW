@@ -20,7 +20,7 @@ window.addEventListener("load",function(){
  // ----------------SLIDER SCRIPT END---------------------
  var home=document.getElementsByClassName("b2");
  home[0].addEventListener("click",function(){
-    window.location.href="../Home.html";
+    window.location.href="../index.html";
  });
 
  var products_data=JSON.parse(localStorage.getItem("products"));
@@ -60,7 +60,7 @@ window.addEventListener("load",function(){
             if(currentUser_data==null || currentUser_data=="")
             {
                 alert("please login first");
-                window.location.href="../Signin.html";
+                window.location.href="../pages/Signin.html";
             }
             currentUser_data=JSON.parse(currentUser_data);
            var index=+this.getAttribute("value");
@@ -89,7 +89,7 @@ window.addEventListener("load",function(){
             if(currentUser_data==null || currentUser_data=="")
             {
                 alert("please login first");
-                window.location.href="../Signin.html";
+                window.location.href="../pages/Signin.html";
             }
             currentUser_data=JSON.parse(currentUser_data);
             var index=+this.getAttribute("value");
@@ -114,7 +114,7 @@ window.addEventListener("load",function(){
         both_div[i].addEventListener("click",function(){
             var details=this.parentElement.firstChild.firstChild.getAttribute("value");
             localStorage.setItem("currentProduct",details);
-            window.location.href="../Product.html";
+            window.location.href="../pages/Product.html";
 
         });
     }

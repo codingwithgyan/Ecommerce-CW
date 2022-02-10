@@ -4,7 +4,7 @@ window.addEventListener("load",function(){
     if(currentUser_data==null || currentUser_data=="")
     {
         alert("please login first");
-        window.location.href="../Signin.html";
+        window.location.href="../pages/Signin.html";
     }
     currentUser_data=JSON.parse(currentUser_data);
 
@@ -111,7 +111,7 @@ function fn()
             if(currentUser==null || currentUser=="")
             {
                 alert("please login first");
-                window.location.href="../Signin.html";
+                window.location.href="../pages/Signin.html";
             }
             currentUser=JSON.parse(currentUser);
 
@@ -132,14 +132,14 @@ function fn()
                             localStorage.setItem("user",JSON.stringify(user_data));
                             localStorage.setItem("cartTotal","0");
                             alert("Order Complete");
-                            window.location.href="../Myorder.html";
+                            window.location.href="../pages/Myorder.html";
                             break;
                         }
                         else
                         {
                             // ----------------order complete here-------------------
                             alert("Please add item to cart");
-                            window.location.href="../Home.html";
+                            window.location.href="../index.html";
                         }
                        
                     }
@@ -149,7 +149,7 @@ function fn()
             else
             {
                 alert("Login First");
-                window.location.href="../Home.html";
+                window.location.href="../index.html";
             }
             
          }

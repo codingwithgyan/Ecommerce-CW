@@ -16,7 +16,7 @@ function signup(){
         username:username,
         mobile:mobile,
         Gender:gender,
-        cart:"",wishlist:""
+        cart:[],wishlist:[],order:[]
     }
   /*if any of the input feild is kept empty by the user then the 
   code below will restrict addition of data to local storage*/
@@ -28,7 +28,7 @@ function signup(){
       userData.push(userCredentials);
         localStorage.setItem("user",JSON.stringify(userData));
         alert("signup sussesfull");
-        window.location.href="purplle_signin.html"
+        window.location.href="../pages/Signin.html"
     }
         
 }

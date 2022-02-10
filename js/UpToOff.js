@@ -33,7 +33,7 @@ displayItem();
         if(currentUser_data==null || currentUser_data=="")
         {
             alert("please login first");
-            window.location.href="../Signin.html";
+            window.location.href="../pages/Signin.html";
         }
         currentUser_data =JSON.parse(currentUser_data);
         var index=+this.getAttribute("value");
@@ -62,7 +62,7 @@ displayItem();
         if(currentUser_data==null || currentUser_data=="")
         {
             alert("please login first");
-            window.location.href="../Signin.html";
+            window.location.href="../pages/Signin.html";
         }
         currentUser_data =JSON.parse(currentUser_data);
          var index=+this.getAttribute("value");
@@ -85,7 +85,7 @@ displayItem();
      });
     
      both_div[i].addEventListener("click",function(){
-         window.location.href="../Product.html";
+         window.location.href="../pages/Product.html";
 
      });
  }

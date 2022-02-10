@@ -4,13 +4,13 @@ window.addEventListener("load",function(){
     if(currentUser_data==null || currentUser_data=="")
     {
         alert("please login first");
-        window.location.href="../Signin.html";
+        window.location.href="../pages/Signin.html";
     }
     currentUser_data=JSON.parse(currentUser_data);   
 
  var home=document.getElementsByClassName("b2");
  home[0].addEventListener("click",function(){
-    window.location.href="../Home.html";
+    window.location.href="../pages/Home.html";
  });
  displayItem();
 
@@ -89,7 +89,7 @@ window.addEventListener("load",function(){
                         user_data[j].wishlist=obj;
                         localStorage.setItem("user",JSON.stringify(user_data));
                         alert("Item removed from wishlist");
-                        window.location.href="../Wishlist.html";
+                        window.location.href="../pages/Wishlist.html";
                         break;
                 }
             }
@@ -169,7 +169,7 @@ function displayItem()
                 else
                 {
                     alert("Wishlist is empty");
-                    window.location.href="../Home.html";
+                    window.location.href="../index.html";
                 }
                 break;
             }
@@ -178,7 +178,7 @@ function displayItem()
     else
     {
         alert("No user exist with this email");
-        window.location.href="../Home.html";
+        window.location.href="../index.html";
     }
    
 

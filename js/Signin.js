@@ -14,7 +14,7 @@ function signin() {
   var pass = document.querySelector("#pass").value;
 
   if (email == "admin@gmail.com" && pass == "12345") {
-    window.location.href = "../Admin.html";
+    window.location.href = "../pages/Admin.html";
   } 
   else 
   {
@@ -31,7 +31,7 @@ function signin() {
     {
       localStorage.setItem("currentUser", JSON.stringify(currentUser));
       alert("login succesfull");
-      window.location.href="../Home.html";
+      window.location.href="../index.html";
     } 
     else 
     {

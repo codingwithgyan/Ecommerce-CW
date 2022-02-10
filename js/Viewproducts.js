@@ -54,7 +54,7 @@ window.addEventListener("load",function(){
             if(currentUser_data==null || currentUser_data=="")
             {
                 alert("please login first");
-                window.location.href="../Signin.html";
+                window.location.href="../pages/Signin.html";
             }
             else
             {
@@ -87,7 +87,7 @@ window.addEventListener("load",function(){
             if(currentUser_data==null || currentUser_data=="")
             {
                 alert("please login first");
-                window.location.href="../Signin.html";
+                window.location.href="../pages/Signin.html";
             }
             else
             {
@@ -116,7 +116,7 @@ window.addEventListener("load",function(){
         both_div[i].addEventListener("click",function(){
             var details=this.parentElement.firstChild.firstChild.getAttribute("value");
             localStorage.setItem("currentProduct",details);
-            window.location.href="../Product.html";
+            window.location.href="../pages/Product.html";
 
         });
         

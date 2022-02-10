@@ -4,7 +4,7 @@ window.addEventListener("load",function(){
     if(login_btn!=null)
     {
         login_btn.addEventListener("click",function(){
-            window.location.href="../Signin.html";
+            window.location.href="../pages/Signin.html";
         });
     }
     
@@ -20,7 +20,7 @@ window.addEventListener("load",function(){
             login_btn.addEventListener("click",function(){
                localStorage.setItem("currentUser","");
                alert("logged out successfully");
-               window.location.href="../Home.html";
+               window.location.href="../index.html";
             });
             var signup_btn=document.getElementById("signup_btn");
             signup_btn.style.display="none";
@@ -89,7 +89,7 @@ window.addEventListener("load",function(){
                                 p.innerHTML=subtype_data[k].name;
                                 p.addEventListener("click",function(){
                                     localStorage.setItem("currentPage",this.innerHTML);
-                                    window.location.href="../filterpage.html";
+                                    window.location.href="../pages/filterpage.html";
                                 });
                                 type_1.append(p);
                             }
@@ -112,7 +112,7 @@ window.addEventListener("load",function(){
                                 p.innerHTML=subtype_data[k].name;
                                 p.addEventListener("click",function(){
                                     localStorage.setItem("currentPage",this.innerHTML);
-                                    window.location.href="../filterpage.html";
+                                    window.location.href="../pages/filterpage.html";
                                 });
                                 type_2.append(p);
                             }
@@ -135,7 +135,7 @@ window.addEventListener("load",function(){
                                 p.innerHTML=subtype_data[k].name;
                                 p.addEventListener("click",function(){
                                     localStorage.setItem("currentPage",this.innerHTML);
-                                    window.location.href="../filterpage.html";
+                                    window.location.href="../pages/filterpage.html";
                                 });
                                 type_3.append(p);
                             }
@@ -158,7 +158,7 @@ window.addEventListener("load",function(){
                                 p.innerHTML=subtype_data[k].name;
                                 p.addEventListener("click",function(){
                                     localStorage.setItem("currentPage",this.innerHTML);
-                                    window.location.href="../filterpage.html";
+                                    window.location.href="../pages/filterpage.html";
                                 });
                                 type_4.append(p);
                             }
@@ -213,27 +213,27 @@ window.addEventListener("load",function(){
     var b2=document.getElementsByClassName("b2");
     b2[0].style.cursor="pointer";
     b2[0].addEventListener("click",function(){
-        window.location.href="../Home.html";
+        window.location.href="../index.html";
     });
 
     var brand_nav=document.getElementById("brand_nav");
     brand_nav.addEventListener("click",function(){
-        window.location.href="../Brand.html";
+        window.location.href="../pages/Brand.html";
     });
     var offer_nav=document.getElementById("offer_nav");
     offer_nav.addEventListener("click",function(){
-        window.location.href="../Offer.html";
+        window.location.href="../pages/Offer.html";
     });
     
     var cart_btn_11=document.getElementById("cart_btn_11");
     cart_btn_11.style.cursor="pointer";
     cart_btn_11.addEventListener("click",function(){
-        window.location.href="../Cart.html";
+        window.location.href="../pages/Cart.html";
     });
     var wish_btn_11=document.getElementById("wish_btn_11");
     wish_btn_11.style.cursor="pointer";
     wish_btn_11.addEventListener("click",function(){
-        window.location.href="../Wishlist.html";
+        window.location.href="../pages/Wishlist.html";
     });
 
     var profile_btn_11=document.getElementById("profile_btn_11");

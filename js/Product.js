@@ -46,7 +46,7 @@ window.addEventListener("load",function(){
             if(currentUser_data==null || currentUser_data=="")
             {
                 alert("please login first");
-                window.location.href="../Signin.html";
+                window.location.href="../pages/Signin.html";
             }
             currentUser_data=JSON.parse(currentUser_data);
 
@@ -75,7 +75,7 @@ window.addEventListener("load",function(){
             if(currentUser_data==null || currentUser_data=="")
             {
                 alert("please login first");
-                window.location.href="../Signin.html";
+                window.location.href="../pages/Signin.html";
             }
             currentUser_data=JSON.parse(currentUser_data);
         var obj=products_data[index];

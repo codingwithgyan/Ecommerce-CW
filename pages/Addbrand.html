@@ -6,10 +6,9 @@
     <title></title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="css/admin.css" />
-    <link rel="stylesheet" href="css/Addcategory.css" />
-    <link rel="stylesheet" href="css/Addtype.css" />
-    <script type="text/javascript" src="js/Addtype.js"></script>
+    <link rel="stylesheet" href="../css/admin.css" />
+    <link rel="stylesheet" href="../css/Addcategory.css" />
+    <script type="text/javascript" src="../js/Addbrand.js"></script>
   </head>
   <body>
     <div id="container">
@@ -22,18 +21,20 @@
         <button id="add_product">Add Product</button>
       </div>
       <div id="content">
+        <h1 style="text-align: center">Add Brand</h1>
+        <br /><br />
         <div class="form">
-          <div><h2>Select Category</h2></div>
-          <div>
-            <select name="" id="cat"></select>
-          </div>
+          <div><h2>Name</h2></div>
+          <div><input id="name" type="text" /></div>
         </div>
-
         <div class="form">
-          <div><h2>Add Type</h2></div>
-          <div><input id="type" type="text" /></div>
+          <div><h2>Logo url</h2></div>
+          <div><input id="logo_img" type="text" /></div>
         </div>
-
+        <div class="form">
+          <div><h2>Description</h2></div>
+          <div><input id="description" type="text" /></div>
+        </div>
         <button id="btn">Add</button>
       </div>
     </div>

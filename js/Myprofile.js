@@ -4,7 +4,7 @@ window.addEventListener("load",function(){
             if(currentUser==null || currentUser=="")
             {
                 alert("please login first");
-                window.location.href="../Signin.html";
+                window.location.href="../pages/Signin.html";
             }
             currentUser=JSON.parse(currentUser);
 

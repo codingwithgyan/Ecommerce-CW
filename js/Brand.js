@@ -29,7 +29,7 @@ window.addEventListener("load",function(){
                     a.addEventListener("click",function(){
                         var index=this.getAttribute("value");
                         localStorage.setItem("currentBrand",index);
-                        window.location.href="../Viewbrand.html";
+                        window.location.href="../pages/Viewbrand.html";
                     });
                     a.innerHTML=brand_data[j].name;
                     li.append(a);
@@ -51,7 +51,7 @@ window.addEventListener("load",function(){
     else
     {
         alert("No brand data exist");
-        window.location.href="../Home.html";
+        window.location.href="../index.html";
     }
     
 });

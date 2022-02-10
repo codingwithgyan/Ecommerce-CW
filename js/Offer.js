@@ -2,7 +2,7 @@ var products_data=JSON.parse(localStorage.getItem("products"));
 if(products_data==null || products_data.length==0)
 {
     alert("No product available");
-    window.location.href="../Home.html";
+    window.location.href="../index.html";
 }
 window.addEventListener("load",function(){
 
@@ -91,7 +91,7 @@ window.addEventListener("load",function(){
     })
     
     function uptoOff() {
-        return window.location.href="upToOff.html"
+        return window.location.href="../pages/UpToOff.html"
     }
     
     var box3 = [

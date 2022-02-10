@@ -4,7 +4,7 @@ window.addEventListener("load",function(){
     if(currentUser==null || currentUser=="")
     {
         alert("please login first");
-        window.location.href="../Signin.html";
+        window.location.href="../pages/Signin.html";
     }
     currentUser =JSON.parse(currentUser);
 var user_data=JSON.parse(localStorage.getItem("user"));
@@ -23,7 +23,7 @@ for(var i=0;i<user_data.length;i++)
 var b2=document.getElementsByClassName("b2");
     b2[0].style.cursor="pointer";
     b2[0].addEventListener("click",function(){
-        window.location.href="../Home.html";
+        window.location.href="../index.html";
     });
 
 });
@@ -87,7 +87,7 @@ function displaycart(cartitems){
     else
     {
         alert("Please add items to cart");
-        window.location.href="../Home.html";
+        window.location.href="../index.html";
     }
     
        
@@ -164,7 +164,7 @@ function addFeautres()
    
    var placeorder=document.querySelector("#placeorderbutton");
    placeorder.addEventListener("click",function(){
-       window.location.href="../Payment.html"
+       window.location.href="../pages/Payment.html"
    });
 }
  
