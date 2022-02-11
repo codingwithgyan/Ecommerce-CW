@@ -1,4 +1,4 @@
-# Ecommerce-CW
+# Purplle
 <img  width="600" src="./image/purplle.png"/>
 Ecommerce is designed truly based on basic languages HTML, CSS, and Javascript only.
 
