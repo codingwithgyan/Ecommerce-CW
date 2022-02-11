@@ -3,6 +3,9 @@
 Ecommerce website truly based on HTML, CSS, and Javascript only.
 I am using localstorage to add dummy data.
 
+# Teach stack
+  HTML | CSS | JAVASCRIPT
+  
 # Features Available
 <ul>
 <li>User can signup and signin easily.</li><br>
@@ -20,3 +23,9 @@ I am using localstorage to add dummy data.
 <li>Admin can add any product of certain brand ,type , or subtype</li><br/>
 <li>Admin can also add offers to a product.</li><br/>
 </ul>
+
+<p align="left">
+<a href="https://dev.to/codingwithgyan" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/devto.svg" alt="https://dev.to/codingwithgyan" height="30" width="40" /></a>
+<a href="https://twitter.com/codewithgyan" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="codewithgyan" height="30" width="40" /></a>
+<a href="https://www.linkedin.com/in/codewithgyan/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="https://www.linkedin.com/in/codewithgyan/" height="30" width="40" /></a>
+</p>  
