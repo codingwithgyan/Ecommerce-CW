@@ -1,9 +1,7 @@
 # Purplle
 <img  width="600" src="./image/purplle.png"/>
-Ecommerce is designed truly based on basic languages HTML, CSS, and Javascript only.
-
-You Can Add dummy data using the file "AddData.html"
-After opening the file in browser just click on the button and dummy data will be added to your localStorage
+Ecommerce website truly based on HTML, CSS, and Javascript only.
+I am using localstorage to add dummy data.
 
 # Features Available
 <ul>
@@ -19,6 +17,6 @@ After opening the file in browser just click on the button and dummy data will b
 <li>Most of the part in the website is dynamic.</li><br/>
 <li>Navbar is totally dynamic , Admin can add more category , type and subtype</li><br/>
 <li>Admin can add brands</li><br/>
-<li>Admin can add products of certain brand ,type , or subtype</li><br/>
+<li>Admin can add any product of certain brand ,type , or subtype</li><br/>
 <li>Admin can also add offers to a product.</li><br/>
 </ul>
